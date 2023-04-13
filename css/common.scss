@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap');
+@import url(./bootstrap.css);
+@import url(./reset.css);
+html {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+body {
+    min-width: 1680px;
+}
+
+
+
+
+$gnbHeight : 126px;
+
+
+.gnb {
+    display: flex;
+    align-items: center;
+    padding: 0 50px 0 40px;
+    height: $gnbHeight;
+    border-bottom: 1px solid #E9E9E9;
+    position: sticky;
+    top: 0;
+    .menu {
+        display: flex;
+        flex: 1 0 auto;
+        align-items: center;
+        gap: 48px;
+        padding-left: 86px;
+        a {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            height: 39px;
+            padding-bottom: 4px;
+            box-sizing: border-box;
+            display: block;
+            color: #686868;
+            border-bottom: 4px solid transparent;
+        }
+        li {
+            position: relative;
+        }
+        .ac {
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     bottom: 0;
+            // }
+            a {
+                color: #000;
+                border-bottom-color: #4EBBF7;
+            }
+        } 
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        .text {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 12px;
+        }
+        .name {
+            font-weight: bold;
+        }
+        .after {
+            color:#7E7E7E;
+        }
+        .profileImg {
+            border-radius: 100px;
+            border: 1px solid #4EBBF7;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+    }
+}
+
+.lnb {
+    padding: 40px;
+    width: 286px;
+    min-height: calc(100vh - $gnbHeight);
+    height: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: $gnbHeight;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid #E9E9E9;
+    .tit {
+        margin-top: 8px;
+        padding-left: 40px;
+        background: #fff left 3px no-repeat;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.42;
+        padding-bottom: 32px;
+        border-bottom: 1px solid #686868;
+        margin-bottom: 32px;
+        &.page-app {background-image: url(../img/lnb/lnb_page-app.svg);}
+        &.page-project {background-image: url(../img/lnb/lnb_page-project.svg);}
+    }
+    .menu {
+        padding-bottom: 32px;
+        border-bottom: 1px solid #E9E9E9;
+        li {
+            display: block;
+            background: 16px/24px no-repeat;
+            color: #4A4A4A;
+            border-radius: 8px;
+            overflow: hidden;
+            &.ac {
+                background-color: #4EBBF7;
+                color: #fff;
+            }
+            & + li {
+                margin-top: 12px;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                padding-left: 48px;
+                height: 56px;
+                font-size: 16px;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &.subPage01 {
+                background-image: url(../img/lnb/IC_left_satus.svg);
+                &.ac {background-image: url(../img/lnb/IC_left_satus_b.svg)}
+            }
+            &.subPage02 {
+                background-image: url(../img/lnb/IC_left_release.svg);
+                &.ac {background-image: url(../img/lnb/IC_left_release_b.svg)}
+            }
+            &.subPage03 {
+                background-image: url(../img/lnb/IC_left_addnew.svg);
+                &.ac {background-image: url(../img/lnb/IC_left_addnew_b.svg)}
+            }
+            &.subPage04 {
+                background-image: url(../img/lnb/IC_left_newcicd.svg);
+                &.ac {background-image: url(../img/lnb/IC_left_newcicd_b.svg)}
+            }
+        }
+    }
+}
