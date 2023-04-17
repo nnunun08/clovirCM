@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-01">
+        앱관리 팝업
+    </button>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-02">
+        앱관리 팝업 - grid
+    </button>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-03">
+        앱관리 팝업 - 06. Yaml
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modal-01" tabindex="-1" aria-labelledby="modal-01Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content" style="min-height: 720px;">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-01Label">상세정보</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tab">
+                    <div class="item ac">접속이력</div>
+                    <div class="item">변경이력</div>
+                </div>
+
+                <div class="step">
+                    <div class="item complete">
+                        <span class="numbering">1</span>
+                        <span class="text">신청내역</span>
+                    </div>
+                    <div class="item focus">
+                        <span class="numbering">2</span>
+                        <span class="text">실행정보</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">3</span>
+                        <span class="text">Pod</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">4</span>
+                        <span class="text">Service</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">5</span>
+                        <span class="text">Containers</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">6</span>
+                        <span class="text">Yaml</span>
+                    </div>
+                </div>
+                
+
+                <div class="step-contents-01">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>value</th>
+                                <td>
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                                <th>value</th>
+                                <td>
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">value</th>
+                                <td>
+                                    <input type="text" placeholder="이미지를 선택 해 주세요">
+                                </td>
+                                <th>value</th>
+                                <td>
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>value</th>
+                                <td colspan="3">
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>value</th>
+                                <td colspan="3">
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <th>value</th>
+                                <td>
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                                <th>value</th>
+                                <td>
+                                    <select class="select" name="" id="">
+                                        <option value="text1">text1</option>
+                                        <option value="text2">text2</option>
+                                        <option value="text3">text3</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
+                <button type="button" class="btn-m-main">선택</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-02" tabindex="-1" aria-labelledby="modal-02Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content" style="min-height: 720px;">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-02Label">상세정보</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tab">
+                    <div class="item ac">접속이력</div>
+                    <div class="item">변경이력</div>
+                </div>
+
+                <div class="step">
+                    <div class="item complete">
+                        <span class="numbering">1</span>
+                        <span class="text">신청내역</span>
+                    </div>
+                    <div class="item complete">
+                        <span class="numbering">2</span>
+                        <span class="text">실행정보</span>
+                    </div>
+                    <div class="item focus">
+                        <span class="numbering">3</span>
+                        <span class="text">Pod</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">4</span>
+                        <span class="text">Service</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">5</span>
+                        <span class="text">Containers</span>
+                    </div>
+                    <div class="item">
+                        <span class="numbering">6</span>
+                        <span class="text">Yaml</span>
+                    </div>
+                </div>
+                
+
+                <div class="step-contents-03">
+                    <div class="grid">
+                        <table class="table">
+                            <thead class="thead">
+                                <tr>
+                                    <!-- evoke : th에서 inline style로 width를 지정해주세요. 지정하지 않으면 균등 width 배분됩니다. -->
+                                    <th style="width: 56px;">NO</th>
+                                    <th>파드명</th>
+                                    <th>파드IP</th>
+                                    <th>노드명</th>
+                                    <th>생성일자</th>
+                                    <th>변경일자</th>
+                                    <th>파드상태</th>
+                                    <th>준비상태</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td>1</td>
+                                    <td>파이프라인</td>
+                                    <td>서버서버</td>
+                                    <td>4-16 Core</td>
+                                    <td>4GB-64GB</td>
+                                    <td>50-2000GB</td>
+                                    <td>aaaaaaaa</td>
+                                    <td>디렉토리</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>파이프라인</td>
+                                    <td>서버서버</td>
+                                    <td>4-16 Core</td>
+                                    <td>4GB-64GB</td>
+                                    <td>50-2000GB</td>
+                                    <td>aaaaaaaa</td>
+                                    <td>디렉토리</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>파이프라인</td>
+                                    <td>서버서버</td>
+                                    <td>4-16 Core</td>
+                                    <td>4GB-64GB</td>
+                                    <td>50-2000GB</td>
+                                    <td>aaaaaaaa</td>
+                                    <td>디렉토리</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>파이프라인</td>
+                                    <td>서버서버</td>
+                                    <td>4-16 Core</td>
+                                    <td>4GB-64GB</td>
+                                    <td>50-2000GB</td>
+                                    <td>aaaaaaaa</td>
+                                    <td>디렉토리</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>파이프라인</td>
+                                    <td>서버서버</td>
+                                    <td>4-16 Core</td>
+                                    <td>4GB-64GB</td>
+                                    <td>50-2000GB</td>
+                                    <td>aaaaaaaa</td>
+                                    <td>디렉토리</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
+                <button type="button" class="btn-m-main">선택</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-03" tabindex="-1" aria-labelledby="modal-03Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content" style="min-height: 720px;">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-03Label">상세정보</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tab">
+                    <div class="item ac">접속이력</div>
+                    <div class="item">변경이력</div>
+                </div>
+
+                <div class="step">
+                    <div class="item complete">
+                        <span class="numbering">1</span>
+                        <span class="text">신청내역</span>
+                    </div>
+                    <div class="item complete">
+                        <span class="numbering">2</span>
+                        <span class="text">실행정보</span>
+                    </div>
+                    <div class="item complete">
+                        <span class="numbering">3</span>
+                        <span class="text">Pod</span>
+                    </div>
+                    <div class="item complete">
+                        <span class="numbering">4</span>
+                        <span class="text">Service</span>
+                    </div>
+                    <div class="item complete">
+                        <span class="numbering">5</span>
+                        <span class="text">Containers</span>
+                    </div>
+                    <div class="item focus">
+                        <span class="numbering">6</span>
+                        <span class="text">Yaml</span>
+                    </div>
+                </div>
+                
+
+                <div class="step-contents-06">
+                    <img src="./img/img_step06_code.png" alt="img">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
+                <button type="button" class="btn-m-main">선택</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

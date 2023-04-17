@@ -1,0 +1,31 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-top: 1px solid #686868;
+    border-collapse: collapse;
+}
+th,td {
+    vertical-align: middle;
+    border-bottom: 1px solid #E9E9E9;
+}
+th {
+    background-color: #F9F9F9;
+    font-weight: 500;
+    line-height: 1.43;
+    color: #4A4A4A;
+    height: 68px;
+    width: 200px;
+    text-align: center;
+    &.req::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: url(../img/ic_req.svg) center no-repeat;
+        margin-right: 4px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+}
+td {
+    padding: 14px 20px;
+}

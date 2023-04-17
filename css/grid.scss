@@ -1,0 +1,49 @@
+.grid {
+    .table {
+        // table-layout: fixed;
+        table-layout: auto;
+        width: 100%;
+        border-top: 1px solid #686868;
+        border-bottom: 1px solid #C8C8C8;
+    }
+    .thead {
+        th {
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.43;
+            color: #4A4A4A;
+            height: 60px;
+            background-color: #F9F9F9;
+            border: 1px solid #E9E9E9;
+            border-top: 0;
+            &:first-child {
+                border-left: 0;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+    .tbody {
+        td {
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 16px;
+            line-height: 1.43;
+            height: 60px;
+            border: 1px solid #E9E9E9;
+            &:first-child {
+                border-left: 0;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+        }
+        tr:last-child {
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+}
