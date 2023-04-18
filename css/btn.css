@@ -1,5 +1,5 @@
 .btn-xs-df {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -9,7 +9,6 @@
   margin: 0;
   width: auto;
   gap: 4px;
-  min-width: 82px;
   height: 28px;
   font-size: 12px;
   font-weight: 500;
@@ -18,7 +17,7 @@
   font-weight: 500;
 }
 .btn-xs-main {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -28,7 +27,6 @@
   margin: 0;
   width: auto;
   gap: 4px;
-  min-width: 82px;
   height: 28px;
   font-size: 12px;
   font-weight: 500;
@@ -37,7 +35,7 @@
   font-weight: 700;
 }
 .btn-xs-sub {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -47,7 +45,6 @@
   margin: 0;
   width: auto;
   gap: 4px;
-  min-width: 82px;
   height: 28px;
   font-size: 12px;
   font-weight: 500;
@@ -56,7 +53,7 @@
   font-weight: 500;
 }
 .btn-xs-dis {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -66,7 +63,6 @@
   margin: 0;
   width: auto;
   gap: 4px;
-  min-width: 82px;
   height: 28px;
   font-size: 12px;
   font-weight: 500;
@@ -75,7 +71,7 @@
 }
 
 .btn-s-df {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -93,7 +89,7 @@
   font-weight: 500;
 }
 .btn-s-main {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -111,7 +107,7 @@
   font-weight: 700;
 }
 .btn-s-sub {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -129,7 +125,7 @@
   font-weight: 500;
 }
 .btn-s-dis {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -147,7 +143,7 @@
 }
 
 .btn-m-df {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -164,7 +160,7 @@
   font-weight: 500;
 }
 .btn-m-main {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -181,7 +177,7 @@
   font-weight: 700;
 }
 .btn-m-sub {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -198,7 +194,7 @@
   font-weight: 500;
 }
 .btn-m-dis {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -215,7 +211,7 @@
 }
 
 .btn-l-df {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -233,7 +229,7 @@
   font-weight: 500;
 }
 .btn-l-main {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -249,9 +245,10 @@
   background: #4EBBF7;
   color: #fff;
   font-weight: 700;
+  background-color: #0098ED;
 }
 .btn-l-sub {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -269,7 +266,7 @@
   font-weight: 500;
 }
 .btn-l-dis {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -287,7 +284,7 @@
 }
 
 .btn-xl-df {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -305,7 +302,7 @@
   font-weight: 500;
 }
 .btn-xl-main {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -321,9 +318,10 @@
   background: #4EBBF7;
   color: #fff;
   font-weight: 700;
+  background-color: #0098ED;
 }
 .btn-xl-sub {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -341,7 +339,7 @@
   font-weight: 500;
 }
 .btn-xl-dis {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;

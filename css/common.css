@@ -348,6 +348,7 @@ body {
   align-items: center;
   margin-bottom: 13px;
   padding-right: 2px;
+  min-height: 28px;
 }
 .gridWrap .top .result {
   font-size: 12px;
@@ -362,6 +363,8 @@ body {
 .gridWrap .top .control {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1 0 auto;
   gap: 8px;
 }
 .gridWrap .top .control .new {
@@ -400,6 +403,7 @@ body {
   border-radius: 4px;
   padding: 0 16px;
   border: 1px solid #E9E9E9;
+  background-color: #fff;
 }
 .gridWrap .top .control .view {
   border: 0;
@@ -408,19 +412,40 @@ body {
   padding-right: 16px;
   background: url(../img/ic_gridControl_view.svg) right center/12px no-repeat;
 }
-.gridWrap .pagination {
+.gridWrap .top .control .cont-list {
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF center no-repeat;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-image: url(../img/ic_list.svg);
+}
+.gridWrap .top .control .cont-grid {
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF center no-repeat;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-image: url(../img/ic_grid.svg);
+}
+
+.pagination {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
 }
-.gridWrap .pagination .active .page-link {
+.pagination .active .page-link {
   border-radius: 50%;
   background: #FFFFFF;
   border: 1px solid #4EBBF7;
   color: #0098ED;
   font-weight: 700;
 }
-.gridWrap .pagination .page-link {
+.pagination .page-link {
   width: 26px;
   height: 26px;
   display: flex;
@@ -432,25 +457,25 @@ body {
   color: #4A4A4A;
   margin: 0 9px;
 }
-.gridWrap .pagination .page-link:hover {
+.pagination .page-link:hover {
   background-color: inherit;
 }
-.gridWrap .pagination .arr {
+.pagination .arr {
   width: 20px;
   height: 20px;
   margin: 0 3px;
 }
-.gridWrap .pagination .prev {
+.pagination .prev {
   background: url(../img/ic_pagination_arr1.svg) center/20px no-repeat;
 }
-.gridWrap .pagination .prev-most {
+.pagination .prev-most {
   background: url(../img/ic_pagination_arr2.svg) center/20px no-repeat;
 }
-.gridWrap .pagination .next {
+.pagination .next {
   background: url(../img/ic_pagination_arr1.svg) center/20px no-repeat;
   transform: rotate(180deg);
 }
-.gridWrap .pagination .next-most {
+.pagination .next-most {
   background: url(../img/ic_pagination_arr2.svg) center/20px no-repeat;
   transform: rotate(180deg);
 }
@@ -478,10 +503,25 @@ body {
 
 .modal-xl {
   width: 100vw;
+  max-width: 1599px;
+}
+
+.modal-l {
+  width: 100vw;
   max-width: 1260px;
 }
 
+.modal-m {
+  width: 100vw;
+  max-width: 680px;
+}
+
+.modal-backdrop.show {
+  opacity: 0.65;
+}
+
 .modal-content {
+  border: 0;
   border-radius: 20px;
 }
 .modal-content .modal-header {
@@ -591,4 +631,189 @@ body {
 }
 .step .item .text {
   color: #000000;
+}
+
+.step-contents-06 img {
+  width: 100%;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.newAppCard {
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  max-width: 1128px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.newAppCard .tit {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.newAppCard .badge {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0098ED 0%, #41B97F 100%);
+}
+.newAppCard .badge span {
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 12px;
+  text-align: center;
+}
+.newAppCard ul li {
+  position: relative;
+  line-height: 1.43;
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+.newAppCard ul li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #4EBBF7;
+}
+.newAppCard .tagWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+.newAppCard .tag {
+  box-sizing: border-box;
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #E9E9E9;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: #7E7E7E;
+}
+.newAppCard p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  color: #4A4A4A;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.newAppCard .item {
+  flex: 0 0 auto;
+  width: 360px;
+  height: 324px;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #4EBBF7;
+  position: relative;
+  color: #0098ED;
+}
+.newAppCard .cicd-line {
+  border: 1px solid #41B97F;
+  color: #3D8361;
+}
+.newAppCard .cicd-line li::before {
+  background-color: #3D8361;
+}
+.newAppCard .pack-line {
+  border: 1px solid #0064C0;
+  color: #004CA0;
+}
+.newAppCard .pack-line li::before {
+  background-color: #004CA0;
+}
+.newAppCard .app-fill {
+  border: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background-color: #0098ED;
+}
+.newAppCard .app-fill li::before {
+  background-color: #fff;
+}
+.newAppCard .app-fill .badge {
+  background-image: none;
+  background-color: #fff;
+}
+.newAppCard .app-fill .badge span {
+  background: linear-gradient(180deg, #0098ED 0%, #41B97F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.newAppCard .app-fill p {
+  color: #fff;
+}
+.newAppCard .cicd-fill {
+  border: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background-color: #359D6B;
+}
+.newAppCard .cicd-fill li::before {
+  background-color: #fff;
+}
+.newAppCard .cicd-fill .badge {
+  background-image: none;
+  background-color: #fff;
+}
+.newAppCard .cicd-fill .badge span {
+  background: linear-gradient(180deg, #0098ED 0%, #41B97F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.newAppCard .cicd-fill p {
+  color: #fff;
+}
+.newAppCard .pack-fill {
+  border: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  background-color: #0064C0;
+}
+.newAppCard .pack-fill li::before {
+  background-color: #fff;
+}
+.newAppCard .pack-fill .badge {
+  background-image: none;
+  background-color: #fff;
+}
+.newAppCard .pack-fill .badge span {
+  background: linear-gradient(180deg, #0098ED 0%, #41B97F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.newAppCard .pack-fill p {
+  color: #fff;
 }/*# sourceMappingURL=common.css.map */

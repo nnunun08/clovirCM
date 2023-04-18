@@ -1,10 +1,14 @@
 .grid {
+    border-top: 1px solid #686868;
+    border-bottom: 1px solid #C8C8C8;
     .table {
-        // table-layout: fixed;
-        table-layout: auto;
+        table-layout: fixed;
+        // table-layout: auto;
         width: 100%;
-        border-top: 1px solid #686868;
-        border-bottom: 1px solid #C8C8C8;
+        // border-top: 1px solid #686868;
+        // border-bottom: 1px solid #C8C8C8;
+        border: 0;
+        margin: 0;
     }
     .thead {
         th {
@@ -13,6 +17,7 @@
             font-weight: 500;
             line-height: 1.43;
             color: #4A4A4A;
+            width: auto;
             height: 60px;
             background-color: #F9F9F9;
             border: 1px solid #E9E9E9;
@@ -46,4 +51,14 @@
             }
         }
     }
+}
+
+.grid-tit {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.block-40 {
+    margin-top: 40px;
 }

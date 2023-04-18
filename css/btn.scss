@@ -1,6 +1,6 @@
 // BTN
 @mixin btn {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
@@ -35,7 +35,6 @@
 .btn-xs {
     @mixin btn-xs {
         @include btn;
-        min-width: 82px;
         height: 28px;
         font-size: 12px;
         font-weight: 500
@@ -124,6 +123,7 @@
     &-main {
         @include btn-l;
         @include btn-main;
+        background-color: #0098ED;
     }
     &-sub {
         @include btn-l;
@@ -150,6 +150,7 @@
     &-main {
         @include btn-xl;
         @include btn-main;
+        background-color: #0098ED;
     }
     &-sub {
         @include btn-xl;

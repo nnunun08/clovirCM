@@ -1,7 +1,10 @@
+
+.tableWrap {
+    border-top: 1px solid #686868;
+}
 table {
     table-layout: fixed;
     width: 100%;
-    border-top: 1px solid #686868;
     border-collapse: collapse;
 }
 th,td {

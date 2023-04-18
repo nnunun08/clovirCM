@@ -19,49 +19,7 @@
     <div class="cmContent">
         <div class="h1">앱& CI/CD 현황</div>
 
-        <section class="mainSearch">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>value</th>
-                        <td>
-                            <select class="select" name="" id="">
-                                <option value="text1">text1</option>
-                                <option value="text2">text2</option>
-                                <option value="text3">text3</option>
-                            </select>
-                        </td>
-                        <th>value</th>
-                        <td>
-                            <select class="select" name="" id="">
-                                <option value="text1">text1</option>
-                                <option value="text2">text2</option>
-                                <option value="text3">text3</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>value</th>
-                        <td>
-                            <select class="select" name="" id="">
-                                <option value="text1">text1</option>
-                                <option value="text2">text2</option>
-                                <option value="text3">text3</option>
-                            </select>
-                        </td>
-                        <th>value</th>
-                        <td>
-                            <select class="select" name="" id="">
-                                <option value="text1">text1</option>
-                                <option value="text2">text2</option>
-                                <option value="text3">text3</option>
-                            </select>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button class="searchBtn">조회</button>
-        </section>
+        <div data-include-path="./component/mainSearch.html"></div>
 
         <section class="gridWrap">
             <div class="top">
@@ -77,6 +35,9 @@
                         <option value="Action">Action</option>
                     </select>
                     <button class="df">삭제</button>
+                    <button class="df">복원</button>
+                    <button class="cont-list">LIST</button>
+                    <button class="cont-grid">CARD</button>
                     <select class="view" name="" id="">
                         <option value="30개 보기">30개 보기</option>
                         <option value="30개 보기">50개 보기</option>
@@ -93,7 +54,9 @@
                                 <label class="checkbox"><input type="checkbox"></label>
                             </th>
                             <th>value</th>
+                            <th>배포상태</th>
                             <th>value</th>
+                            <th>생성</th>
                         </tr>
                     </thead>
                     <tbody class="tbody">
@@ -103,7 +66,13 @@
                             </td>
                             <td>value</td>
                             <td>
+                                <span class="status run">배포성공</span>
+                            </td>
+                            <td>
                                 <button class="status stay">배포전</button>
+                            </td>
+                            <td>
+                                <button class="btn-xs-main">신청</button>
                             </td>
                         </tr>
                         <tr>
@@ -111,9 +80,15 @@
                                 <label class="checkbox"><input type="checkbox"></label>
                             </td>
                             <td>value</td>
+                            <td>
+                                <span class="status run">배포성공</span>
+                            </td>
                             <td>
                                 <button class="status run">실행중</button>
                             </td>
+                            <td>
+                                <button class="btn-xs-main">신청</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -121,34 +96,44 @@
                             </td>
                             <td>value</td>
                             <td>
+                                <span class="status run">배포성공</span>
+                            </td>
+                            <td>
                                 <button class="status fail">배포실패</button>
+                            </td>
+                            <td>
+                                <button class="btn-xs-main">신청</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <nav aria-label="Page navigation">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link arr prev-most" href="#" aria-label="Previous"></a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link arr prev" href="#" aria-label="Previous"></a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link arr next" href="#" aria-label="Next"></a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link arr next-most" href="#" aria-label="Next"></a>
-                    </li>
-                </ul>
-            </nav>
-
         </section>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link arr prev-most" href="#" aria-label="Previous"></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link arr prev" href="#" aria-label="Previous"></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link arr next" href="#" aria-label="Next"></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link arr next-most" href="#" aria-label="Next"></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="btnWrap">
+            <button class="btn-xl-df" style="width: 260px;">이전</button>
+            <button class="btn-xl-main" style="width: 260px;">다음</button>
+        </div>
+
     </div>
 
     <!-- <div style="margin-left:500px; margin-top:-500px">
