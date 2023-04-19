@@ -604,6 +604,13 @@ $lnbWidth : 286px;
     img {
         width: 100%;
     }
+    .yaml {
+        height: 382px;
+        overflow-y: auto;
+        background-color: #1E1E1E;
+        border: 1px solid #E9E9E9;
+        border-radius: 8px;
+    }
 }
 
 .btnWrap {
@@ -755,5 +762,19 @@ $lnbWidth : 286px;
     .pack-fill {
         @include fill;
         background-color: #0064C0;
+    }
+}
+
+.apply-step-success {
+    text-align: center;
+    .mesg {
+        margin: 44px 0;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1.44;
+        color: #7E7E7E;
+        b {
+            color: #0098ED;
+        }
     }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div data-include-path="./component/gnb.html"></div>
+    <div data-include-path="./component/lnb.html"></div>
+
+    <div class="cmContent">
+        <div class="h1">앱 신규신청</div>
+        <!-- step 컴포넌트 참고 -->
+        <div class="step">
+            <div class="item focus">
+                <span class="numbering">1</span>
+                <span class="text">기본정보</span>
+            </div>
+            <div class="item">
+                <span class="numbering">2</span>
+                <span class="text">자원설정</span>
+            </div>
+            <div class="item">
+                <span class="numbering">3</span>
+                <span class="text">Yaml</span>
+            </div>
+            <div class="item">
+                <span class="numbering">4</span>
+                <span class="text">완료</span>
+            </div>
+        </div>
+
+        <div class="tableWrap">
+            <table>
+                <tr>
+                    <th class="req">Core</th>
+                    <td><div data-include-path="./component/range.html"></div></td>
+                </tr>
+                <tr>
+                    <th class="req">Memory(GB)</th>
+                    <td><div data-include-path="./component/range.html"></div></td>
+                </tr>
+                <tr>
+                    <th>디스크 (GB)</th>
+                    <td><div data-include-path="./component/range.html"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="btnWrap">
+            <button class="btn-xl-df">이전</button>
+            <button class="btn-xl-main">다음</button>
+        </div>
+    </div>
+</body>
+</html>

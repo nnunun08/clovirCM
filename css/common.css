@@ -636,6 +636,13 @@ body {
 .step-contents-06 img {
   width: 100%;
 }
+.step-contents-06 .yaml {
+  height: 382px;
+  overflow-y: auto;
+  background-color: #1E1E1E;
+  border: 1px solid #E9E9E9;
+  border-radius: 8px;
+}
 
 .btnWrap {
   display: flex;
@@ -816,4 +823,18 @@ body {
 }
 .newAppCard .pack-fill p {
   color: #fff;
+}
+
+.apply-step-success {
+  text-align: center;
+}
+.apply-step-success .mesg {
+  margin: 44px 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.44;
+  color: #7E7E7E;
+}
+.apply-step-success .mesg b {
+  color: #0098ED;
 }/*# sourceMappingURL=common.css.map */

@@ -140,6 +140,7 @@
     @mixin btn-xl {
         @include btn;
         min-width: 180px;
+        width: 260px;
         height: 68px;
         font-size: 16px;
     }

@@ -34,4 +34,9 @@ th.req::before {
 
 td {
   padding: 14px 20px;
+}
+
+td:has(.rangeWrap) {
+  padding: 26px;
+  padding-left: 60px;
 }/*# sourceMappingURL=table.css.map */

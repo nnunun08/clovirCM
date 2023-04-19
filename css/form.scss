@@ -1,5 +1,10 @@
 // BASIC FORM
-
+@mixin inputHover {
+    &:hover {
+        color: #0064C0;
+        border-color: #4EBBF7;
+    }
+}
 @mixin default {
     padding: 0 12px;
     background: #FFFFFF;
@@ -8,7 +13,8 @@
     width: 280px;
     line-height: 1.43;
     color: #000;
-    height: 40px
+    height: 40px;
+    @include inputHover;
 }
 input[type="text"] {
     @include default;
@@ -33,10 +39,6 @@ input[type="text"] {
     &:focus-visible {
         color: #000;
         outline: none;
-    }
-    &:hover {
-        color: #0064C0;
-        border-color: #4EBBF7;
     }
     // position: relative;
     // .optionWrap {
@@ -81,7 +83,88 @@ textarea {
     font-size: 14px;
     line-height: 1.43;
     color: #000;
+    resize: none;
     &::placeholder {
         color: #ACACAC;
+    }
+}
+
+
+.rangeWrap {
+    display: flex;
+    align-items: center;
+    .rangeConsole {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 500;
+        color: #0064C0;
+        width: 80px;
+        height: 36px;
+        background: #F8FCFF;
+        border: 1px solid #C7E9FC;
+        border-radius: 6px;
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none; 
+            /* 네이티브 외형 감추기 */
+            -moz-appearance: none;
+            appearance: none;
+        }
+    }
+}
+
+.range {
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    min-width: 600px;
+    input[type="radio"] {
+        display: none;
+    }
+    label {
+        min-width: 18px;
+        line-height: 1.43;
+        text-align: center;
+        color: #686868;
+        position: relative;
+        padding-top: 28px;
+        &::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #F9F9F9;
+            border: 1px solid #C8C8C8;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:has(:checked) {
+            color: #0098ED;
+            &::before {
+                background-color: #0098ED;
+                border-color: #0098ED;
+            }
+            .value {
+                font-weight: 700;
+            } 
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 50%;
+            width: calc(100% + 40px);
+            height: 1px;
+            background-color:#E9E9E9;
+            z-index: -1;
+        }
+        &:last-child::after {
+            display: none;
+        }
     }
 }
