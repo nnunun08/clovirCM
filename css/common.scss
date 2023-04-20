@@ -784,21 +784,42 @@ $lnbWidth : 286px;
     padding-top: 32px;
 }
 .treeView {
-    padding: 32px;
+    padding: 22px 32px;
     border: 1px solid #E9E9E9;
     border-radius: 12px;
     height: 395px;
     overflow-y: auto;
     .group {
-        margin: 10px 0;
+        // margin: 10px 0;
+        &.open {
+            ul:has(.item) {
+                display: block;
+                margin-top: 3px;
+                margin-bottom: 10px;
+                padding-left: 28px;
+            }
+            .groupTit {
+                background: url(../img/ic_24_lowlink.svg) left center no-repeat;
+            }
+        }
     }
     .groupTit {
+        padding: 10px 0;
         font-size: 16px;
+        padding-left: 32px;
+        background: url(../img/ic_24_highlink.svg) left center no-repeat;
+        cursor: pointer;
     }
     ul:has(.item) {
-
+        display: none;
     }
     .item {
-
+        padding: 5px 0;
+        padding-left: 24px;
+        background: url(../img/ic_24_linking.svg) left center no-repeat;
+        cursor: pointer;
+        & + .item {
+            margin-top: 4px;
+        }
     }
 }
