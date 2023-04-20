@@ -26,6 +26,25 @@ input[type=text]:disabled {
   color: #C8C8C8;
 }
 
+input.calendarInput {
+  padding: 0 12px;
+  background: #FFFFFF;
+  border: 1px solid #E9E9E9;
+  border-radius: 6px;
+  width: 280px;
+  line-height: 1.43;
+  color: #000;
+  height: 40px;
+  background: url(../img/ic_16_calendar.svg) right 14px center no-repeat;
+}
+input.calendarInput:hover {
+  color: #0064C0;
+  border-color: #4EBBF7;
+}
+input.calendarInput::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .select {
   padding: 0 12px;
   background: #FFFFFF;

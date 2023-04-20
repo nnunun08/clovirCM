@@ -31,6 +31,15 @@ input[type="text"] {
         color: #C8C8C8;
     }
 }
+
+input.calendarInput {
+    @include default;
+    background: url(../img/ic_16_calendar.svg) right 14px center no-repeat;
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+}
+
 .select {
     @include default;
     padding-right: 31px;
