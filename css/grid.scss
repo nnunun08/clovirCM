@@ -28,6 +28,14 @@
             &:last-child {
                 border-right: 0;
             }
+            &:has(.checkbox) {
+                width: 56px;
+            }
+            .th-filter {
+                border: 0;
+                padding-right: 16px;
+                background: url(../img/ic_16_down.svg) right center no-repeat;
+            }
         }
     }
     .tbody {
@@ -38,11 +46,16 @@
             line-height: 1.43;
             height: 60px;
             border: 1px solid #E9E9E9;
+            color: #000;
             &:first-child {
                 border-left: 0;
             }
             &:last-child {
                 border-right: 0;
+            }
+            .select {
+                font-size: 12px;
+                background-position: right 10px center;
             }
         }
         tr:last-child {

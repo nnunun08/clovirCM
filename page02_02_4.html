@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div data-include-path="./component/gnb.html"></div>
+    <!-- lnb 컴포넌트 참고 -->
+    <div data-include-path="./component/lnb.html"></div>
+
+    <div class="cmContent">
+        <div class="h1">앱 신규신청</div>
+        <!-- step 컴포넌트 참고 -->
+        <div class="step" style="margin-bottom: 60px;">
+            <div class="item complete">
+                <span class="numbering">1</span>
+                <span class="text">프로젝트 정보</span>
+            </div>
+            <div class="item complete">
+                <span class="numbering">2</span>
+                <span class="text">ZONE 선택</span>
+            </div>
+            <div class="item complete">
+                <span class="numbering">3</span>
+                <span class="text">리파지토리 설정</span>
+            </div>
+            <div class="item focus">
+                <span class="numbering">4</span>
+                <span class="text">참여자 선택</span>
+            </div>
+            <div class="item">
+                <span class="numbering">5</span>
+                <span class="text">결재라인 설정</span>
+            </div>
+            <div class="item">
+                <span class="numbering">6</span>
+                <span class="text">완료</span>
+            </div>
+        </div>
+
+        <div class="divisionWrap">
+            <div class="left">
+                <div class="flexWrap">
+                    <div class="searchInputWrap" style="width: 66%;">
+                        <input type="text" class="searchInput" placeholder="사용자/부서명/업무로 검색">
+                        <button class="searchInputBtn">검색</button>
+                    </div>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span>전체 사용자</span>
+                    </label>
+                </div>
+
+                <div class="grid">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th>
+                                    <label class="checkbox"><input type="checkbox"></label>
+                                </th>
+                                <th>사용자명</th>
+                                <th>
+                                    <select class="th-filter" name="" id="">
+                                        <option value="text1">부서명</option>
+                                        <option value="text1">부서명2</option>
+                                        <option value="text1">부서명3</option>
+                                    </select>
+                                </th>
+                                <th>업무</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>
+                                    <label class="checkbox"><input type="checkbox"></label>
+                                </td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="dividerWrap">
+                <div class="divider"></div>
+                <div class="arrowImg"></div>
+            </div>
+            <div class="right">
+                <div class="grid-tit">
+                    프로젝트 참여자
+                </div>
+                <div class="grid">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th>
+                                    <label class="checkbox"><input type="checkbox"></label>
+                                </th>
+                                <th>사용자명</th>
+                                <th>부서명</th>
+                                <th>업무</th>
+                                <th>관리자 여부</th>
+                                <th style="width:80px;">삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>
+                                    <label class="checkbox"><input type="checkbox"></label>
+                                </td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td><button class="btn-minus"></button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="checkbox"><input type="checkbox"></label>
+                                </td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td>value</td>
+                                <td><button class="btn-minus"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="btnWrap">
+            <button class="btn-xl-df">이전</button>
+            <button class="btn-xl-sub">임시저장</button>
+            <button class="btn-xl-main">다음</button>
+        </div>
+    </div>
+</body>
+</html>

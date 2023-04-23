@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div data-include-path="./component/gnb.html"></div>
+    <!-- lnb 컴포넌트 참고 -->
+    <div data-include-path="./component/lnb.html"></div>
+
+    <div class="cmContent">
+        <div class="h1">앱 신규신청</div>
+        <!-- step 컴포넌트 참고 -->
+        <div class="step" style="margin-bottom: 60px;">
+            <div class="item complete">
+                <span class="numbering">1</span>
+                <span class="text">프로젝트 정보</span>
+            </div>
+            <div class="item complete">
+                <span class="numbering">2</span>
+                <span class="text">ZONE 선택</span>
+            </div>
+            <div class="item focus">
+                <span class="numbering">3</span>
+                <span class="text">리파지토리 설정</span>
+            </div>
+            <div class="item">
+                <span class="numbering">4</span>
+                <span class="text">참여자 선택</span>
+            </div>
+            <div class="item">
+                <span class="numbering">5</span>
+                <span class="text">결재라인 설정</span>
+            </div>
+            <div class="item">
+                <span class="numbering">6</span>
+                <span class="text">완료</span>
+            </div>
+        </div>
+
+        <div class="table-tit">
+            GitOps 리파지토리 설정
+        </div>
+        <div class="tableWrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="req">소스 리파지토리 설정</th>
+                        <td>
+                            <label class="checkbox">
+                                <input type="radio" name="settting" checked>
+                                <span>선택안함</span>
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="radio" name="settting">
+                                <span>GITLAB</span>
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="radio" name="settting">
+                                <span>GITHUB</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>URL</th>
+                        <td>
+                            <select class="select" name="" id="" style="width: 240px;">
+                                <option value="text1">GITLAB1</option>
+                                <option value="text1">GITLAB2</option>
+                                <option value="text1">GITLAB3</option>
+                            </select>
+                            <input type="text" placeholder="URL주소 입력">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>URL</th>
+                        <td>
+                            <div class="selectCheck">
+                                <select class="select" name="" id="" style="width: 240px;">
+                                    <option value="text1">GITLAB1</option>
+                                    <option value="text1">GITLAB2</option>
+                                    <option value="text1">GITLAB3</option>
+                                </select>
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span>신규생성</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="req">소스 리파지터리명</th>
+                        <td>
+                            <input type="text" placeholder="소스 리파지터리 명 입력">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="req">그룹명</th>
+                        <td>
+                            <input type="text" placeholder="GITHB계정 입력">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="table-tit">
+            도커 리파지토리 설정 (CI/CD 프로젝트 신청 시 필수)
+        </div>
+        <div class="tableWrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="req">이미지 레지스트리</th>
+                        <td>
+                            <input type="text" placeholder="하버 이름1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>도커 리파지터리명</th>
+                        <td>
+                            <input type="text" placeholder="자동세팅 (에디팅 가능)">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tableWrap">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="req">이미지 레지스트리</th>
+                        <td>
+                            <input type="text" placeholder="하버 이름2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>도커 리파지터리명</th>
+                        <td>
+                            <input type="text" placeholder="자동세팅 (에디팅 가능)">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="btnWrap">
+            <button class="btn-xl-df">이전</button>
+            <button class="btn-xl-sub">임시저장</button>
+            <button class="btn-xl-main">다음</button>
+        </div>
+    </div>
+</body>
+</html>

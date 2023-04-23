@@ -1,6 +1,12 @@
 
 .tableWrap {
     border-top: 1px solid #686868;
+    & + .table-tit {
+        margin-top: 40px;
+    }
+    & + .tableWrap {
+        margin-top: 20px;
+    }
 }
 table {
     table-layout: fixed;
@@ -31,9 +37,24 @@ th {
 }
 td {
     padding: 14px 20px;
+    .checkbox {
+        margin-right: 38px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .select + input {
+        margin-left: 10px;
+    }
 }
 
 td:has(.rangeWrap) {
     padding: 26px;
     padding-left: 60px;
 } 
+
+.table-tit {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}

@@ -1,6 +1,12 @@
 .tableWrap {
   border-top: 1px solid #686868;
 }
+.tableWrap + .table-tit {
+  margin-top: 40px;
+}
+.tableWrap + .tableWrap {
+  margin-top: 20px;
+}
 
 table {
   table-layout: fixed;
@@ -35,8 +41,23 @@ th.req::before {
 td {
   padding: 14px 20px;
 }
+td .checkbox {
+  margin-right: 38px;
+}
+td .checkbox:last-child {
+  margin-right: 0;
+}
+td .select + input {
+  margin-left: 10px;
+}
 
 td:has(.rangeWrap) {
   padding: 26px;
   padding-left: 60px;
+}
+
+.table-tit {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=table.css.map */

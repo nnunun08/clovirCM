@@ -26,6 +26,14 @@
 .grid .thead th:last-child {
   border-right: 0;
 }
+.grid .thead th:has(.checkbox) {
+  width: 56px;
+}
+.grid .thead th .th-filter {
+  border: 0;
+  padding-right: 16px;
+  background: url(../img/ic_16_down.svg) right center no-repeat;
+}
 .grid .tbody td {
   vertical-align: middle;
   text-align: center;
@@ -33,12 +41,17 @@
   line-height: 1.43;
   height: 60px;
   border: 1px solid #E9E9E9;
+  color: #000;
 }
 .grid .tbody td:first-child {
   border-left: 0;
 }
 .grid .tbody td:last-child {
   border-right: 0;
+}
+.grid .tbody td .select {
+  font-size: 12px;
+  background-position: right 10px center;
 }
 .grid .tbody tr:last-child td {
   border-bottom: 0;

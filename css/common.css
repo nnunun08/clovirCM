@@ -19,13 +19,15 @@ body {
 }
 
 .gnb {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   padding: 0 50px 0 40px;
+  width: 100%;
   height: 126px;
   border-bottom: 1px solid #E9E9E9;
-  position: sticky;
-  top: 0;
   background-color: white;
   z-index: 1;
 }
@@ -77,8 +79,7 @@ body {
   box-sizing: border-box;
   width: 40px;
   height: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .lnb {
@@ -87,10 +88,13 @@ body {
   min-height: calc(100vh - 126px);
   height: 100%;
   box-sizing: border-box;
+  position: fixed;
   top: 126px;
   left: 0;
   height: 100%;
   border-right: 1px solid #E9E9E9;
+  background-color: #fff;
+  z-index: 1;
 }
 .lnb .tit {
   margin-top: 8px;
@@ -502,6 +506,24 @@ body {
   background-color: #E95072;
 }
 
+.btn-minus {
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: url(../img/ic_20_cirlce_minus.svg) center no-repeat;
+}
+
+.btn-plus {
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: url(../img/ic_20_cirlce_plus.svg) center no-repeat;
+}
+
 .modal-xl {
   width: 100vw;
   max-width: 1599px;
@@ -879,4 +901,56 @@ body {
 }
 .treeView .item + .item {
   margin-top: 4px;
+}
+
+.divisionWrap {
+  border: 1px solid #E9E9E9;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+}
+.divisionWrap .dividerWrap {
+  padding: 16px 88px 0;
+  position: relative;
+}
+.divisionWrap .dividerWrap .divider {
+  width: 1px;
+  height: 100%;
+  background: #E9E9E9;
+}
+.divisionWrap .dividerWrap .arrowImg {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #fff url(../img/ic_division_arr.svg) center/cover no-repeat;
+}
+.divisionWrap .left {
+  padding-bottom: 20px;
+}
+.divisionWrap .left .flexWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.divisionWrap .left .flexWrap .searchInputWrap {
+  margin-bottom: 0;
+}
+.divisionWrap .right {
+  padding-bottom: 20px;
+}
+.divisionWrap .right .grid-tit {
+  margin-top: 10px;
+}
+
+[attr=arrow] {
+  display: inline-block;
+  margin: 0 20px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/ic_arrow_right.svg) center no-repeat;
+  vertical-align: bottom;
 }/*# sourceMappingURL=common.css.map */
