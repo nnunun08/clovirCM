@@ -16,6 +16,24 @@
   color: #000;
   font-weight: 500;
 }
+.btn-xs-df-line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin: 0;
+  width: auto;
+  gap: 4px;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  border: 1px solid #E9E9E9;
+  font-weight: 400;
+}
 .btn-xs-main {
   display: inline-flex;
   justify-content: center;
@@ -33,6 +51,25 @@
   background: #4EBBF7;
   color: #fff;
   font-weight: 700;
+}
+.btn-xs-main-line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin: 0;
+  width: auto;
+  gap: 4px;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #F8FCFF;
+  border: 1px solid #C7E9FC;
+  color: #0098ED;
+  font-weight: 500;
 }
 .btn-xs-sub {
   display: inline-flex;
@@ -105,6 +142,27 @@
   background: #4EBBF7;
   color: #fff;
   font-weight: 700;
+}
+.btn-s-main-line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 0;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin: 0;
+  width: auto;
+  gap: 4px;
+  min-width: 82px;
+  height: 36px;
+  font-size: 12px;
+  background: #F8FCFF;
+  border: 1px solid #C7E9FC;
+  color: #0098ED;
+  font-weight: 500;
+  color: #0064C0;
+  font-weight: 500;
 }
 .btn-s-sub {
   display: inline-flex;
@@ -358,4 +416,10 @@
   font-size: 16px;
   background: #F5F5F5;
   color: #C8C8C8;
+}
+
+button .ic-list {
+  width: 12px;
+  height: 12px;
+  background: url(../img/ic_12_list.svg) center no-repeat;
 }/*# sourceMappingURL=btn.css.map */

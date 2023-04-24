@@ -1,32 +1,27 @@
 @charset "UTF-8";
-input.searchInput,
-input[type=text] {
+input {
   padding: 0 12px;
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   border-radius: 6px;
-  width: 280px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 280px;
   line-height: 1.43;
   color: #000;
   height: 40px;
 }
-input.searchInput:hover,
-input[type=text]:hover {
+input:hover {
   color: #0064C0;
   border-color: #4EBBF7;
 }
-input.searchInput::placeholder,
-input[type=text]::placeholder {
+input::placeholder {
   color: #ACACAC;
 }
-input.searchInput:read-only,
-input[type=text]:read-only {
+input:read-only {
   background: #F9F9F9;
   border: 1px solid #C8C8C8;
 }
-input.searchInput:disabled,
-input[type=text]:disabled {
+input:disabled {
   background: #F9F9F9;
   border: 1px solid #E9E9E9;
   color: #C8C8C8;
@@ -35,12 +30,12 @@ input[type=text]:disabled {
 input.searchInput {
   padding-right: 40px;
   width: 100%;
+  max-width: 100%;
 }
 
 .searchInputWrap {
   position: relative;
-  width: 100%;
-  margin-bottom: 20px;
+  width: 280px;
 }
 .searchInputWrap .searchInputBtn {
   position: absolute;
@@ -61,8 +56,8 @@ input.calendarInput {
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   border-radius: 6px;
-  width: 280px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 280px;
   line-height: 1.43;
   color: #000;
   height: 40px;
@@ -81,14 +76,15 @@ input.calendarInput::-webkit-calendar-picker-indicator {
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
   border-radius: 6px;
-  width: 280px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 280px;
   line-height: 1.43;
   color: #000;
   height: 40px;
   padding-right: 31px;
   background: url(../img/ic_select_arr.svg) right 15px center/16px no-repeat;
   color: #ACACAC;
+  text-align: left;
 }
 .select:hover {
   color: #0064C0;
@@ -97,6 +93,41 @@ input.calendarInput::-webkit-calendar-picker-indicator {
 .select:focus-visible {
   color: #000;
   outline: none;
+}
+
+.dropdown {
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+}
+.dropdown .select {
+  width: 100%;
+}
+.dropdown .dropdown-menu {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #4EBBF7;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  margin-top: 9px;
+}
+.dropdown .dropdown-menu .dropdown-item {
+  width: 100%;
+  padding: 9px 12px;
+  margin: 0;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #4A4A4A;
+  border-radius: 6px;
+}
+.dropdown .dropdown-menu .dropdown-item + .dropdown-item {
+  margin-top: 4px;
+}
+.dropdown .dropdown-menu .dropdown-item:hover {
+  color: #0064C0;
+  background: #EFF9FF;
 }
 
 .checkbox {

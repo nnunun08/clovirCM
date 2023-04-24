@@ -75,11 +75,20 @@
                     <tr>
                         <th>URL</th>
                         <td>
-                            <select class="select" name="" id="" style="width: 240px;">
+                            <!-- <select class="select" name="" id="" style="width: 240px;">
                                 <option value="text1">GITLAB1</option>
                                 <option value="text1">GITLAB2</option>
                                 <option value="text1">GITLAB3</option>
-                            </select>
+                            </select> -->
+                            <div class="dropdown" style="width:240px;">
+                                <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                  텍스트
+                                </button>
+                                <div class="dropdown-menu">
+                                  <button class="dropdown-item" type="button">텍스트</button>
+                                  <button class="dropdown-item" type="button">텍스트</button>
+                                </div>
+                            </div>
                             <input type="text" placeholder="URL주소 입력">
                         </td>
                     </tr>

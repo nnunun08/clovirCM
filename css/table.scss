@@ -23,7 +23,8 @@ th {
     line-height: 1.43;
     color: #4A4A4A;
     height: 68px;
-    width: 200px;
+    width: 13%;
+    max-width: 200px;
     text-align: center;
     &.req::before {
         content: '';
@@ -43,7 +44,7 @@ td {
             margin-right: 0;
         }
     }
-    .select + input {
+    .dropdown + input {
         margin-left: 10px;
     }
 }

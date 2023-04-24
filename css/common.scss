@@ -303,6 +303,10 @@ $lnbWidth : 286px;
     font-size: 32px;
     line-height: 1.44;
     margin-bottom: 21px;
+    &:has(.control) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .mainSearch {
@@ -346,6 +350,7 @@ $lnbWidth : 286px;
             justify-content: flex-end;
             flex: 1 0 auto;
             gap: 8px;
+            font-size: 12px;
             .new {
                 display: flex;
                 align-items: center;
@@ -898,4 +903,31 @@ $lnbWidth : 286px;
     height: 20px;
     background: url(../img/ic_arrow_right.svg) center no-repeat;
     vertical-align: bottom;
+}
+
+
+.tab-round {
+    gap: 8px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border: 0;
+    .nav-link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.43;
+        color: #000000;
+        padding: 16px;
+        min-width: 160px;
+        background: #F9F9F9;
+        border-radius: 28px;
+        border: 0;
+        &.active {
+            background: #4EBBF7;
+            border-radius: 28px;
+            color: #fff;
+        }
+    }
+}
+.tab-round-content {
+    margin-bottom: 20px;
 }

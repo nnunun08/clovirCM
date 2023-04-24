@@ -16,10 +16,20 @@
     color: #000;
     font-weight: 500;
 }
+@mixin btn-df-line {
+    background-color: #FFFFFF;
+    border: 1px solid #E9E9E9;
+}
 @mixin btn-main {
     background: #4EBBF7;
     color: #fff;
     font-weight: 700;
+}
+@mixin btn-main-line {
+    background: #F8FCFF;
+    border: 1px solid #C7E9FC;
+    color: #0098ED;
+    font-weight: 500;
 }
 @mixin btn-sub {
     background: #EFF9FF;
@@ -43,9 +53,18 @@
         @include btn-xs;
         @include btn-df;
     }
+    &-df-line {
+        @include btn-xs;
+        @include btn-df-line;
+        font-weight: 400;
+    }
     &-main {
         @include btn-xs;
         @include btn-main;
+    }
+    &-main-line {
+        @include btn-xs;
+        @include btn-main-line;
     }
     &-sub {
         @include btn-xs;
@@ -72,6 +91,12 @@
     &-main {
         @include btn-s;
         @include btn-main;
+    }
+    &-main-line {
+        @include btn-s;
+        @include btn-main-line;
+        color: #0064C0;
+        font-weight: 500;
     }
     &-sub {
         @include btn-s;
@@ -161,4 +186,10 @@
         @include btn-xl;
         @include btn-dis;
     }
+}
+
+button .ic-list {
+    width: 12px;
+    height: 12px;
+    background: url(../img/ic_12_list.svg) center no-repeat;
 }
