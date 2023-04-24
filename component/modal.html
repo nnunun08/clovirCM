@@ -35,6 +35,10 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-06">
         프로젝트 선택 - 업무 선택
     </button>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-07">
+        사용자 관리 - 조직도
+    </button>
     
     <!-- Modal -->
     <div class="modal fade" id="modal-01" tabindex="-1" aria-labelledby="modal-01Label" aria-hidden="true">
@@ -519,6 +523,114 @@
                             <ul>
                                 <li class="item">item</li>
                                 <li class="item">item</li>
+                            </ul>
+                        </div>
+
+                        <div class="group open">
+                            <div class="groupTit">결제 플랫폼 구축</div>
+                            <ul>
+                                <li class="item">핀테크 서비스</li>
+                                <li class="item">해외카드연계</li>
+                                <li class="item">애플페이 서비스</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
+                <button type="button" class="btn-m-main">선택</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal-07" tabindex="-1" aria-labelledby="modal-07Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-m">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-07Label">조직도 / 업무선택</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="treeViewWrap">
+                    <div class="treeView">
+                        <!-- groupTit 클릭 시 부모노드 group 에 opne 클래쓰 토글 -->
+                        <div class="group open">
+                            <div class="groupTit">시스템 운영팀</div>
+                            <!-- 트리형태 구조를 위해 하위 요소는 ul로 감싸주세요 -->
+                            <ul>
+                                <div class="group open">
+                                    <div class="groupTit">운영팀</div>
+                                    <ul>
+                                        <li class="item">APP 운영</li>
+                                        <li class="item">시스템 운영</li>
+                                    </ul>
+                                </div>
+                            </ul>
+
+                            <ul>
+                                <div class="group">
+                                    <div class="groupTit">개발팀</div>
+                                    <ul>
+                                        <li class="item">개발팀1 운영</li>
+                                        <li class="item">개발팀2 운영</li>
+                                    </ul>
+                                </div>
+                            </ul>
+
+                            <ul>
+                                <div class="group">
+                                    <div class="groupTit">마케팅팀</div>
+                                    <ul>
+                                        <li class="item">마케팅팀1 운영</li>
+                                        <li class="item">마케팅팀2 운영</li>
+                                        <li class="item">마케팅팀3 운영</li>
+                                    </ul>
+                                </div>
+                            </ul>
+
+                            <ul>
+                                <div class="group open">
+                                    <div class="groupTit">연구소</div>
+                                    <ul>
+                                        <li class="item">V3 연구</li>
+                                        <li class="item">키트 연구</li>
+                                        <li class="item">
+                                            <input type="text" class="addTree" placeholder="부서명을 입력해주세요">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>    
+                        </div>
+
+
+                        <div class="group open">
+                            <div class="groupTit">모바일서비스 고도화</div>
+                            <ul>
+                                <li class="item">모바일앱웹 개발</li>
+                                <li class="item">어드민 개발</li>
+                            </ul>
+                        </div>
+
+                        <div class="group">
+                            <div class="groupTit">의료서비스 연구과제</div>
+                            <ul>
+                                <li class="item">의료서비스 연구과제1</li>
+                                <li class="item">의료서비스 연구과제2</li>
+                            </ul>
+                        </div>
+
+                        <div class="group">
+                            <div class="groupTit">OTT 플랫폼 구축</div>
+                            <ul>
+                                <li class="item">OTT 플랫폼 구축1</li>
+                                <li class="item">OTT 플랫폼 구축2</li>
                             </ul>
                         </div>
 

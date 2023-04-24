@@ -879,16 +879,17 @@ body {
   height: 395px;
   overflow-y: auto;
 }
-.treeView .group.open ul:has(.item) {
+.treeView .group.open > ul:has(.item) {
   display: block;
   margin-top: 3px;
   margin-bottom: 10px;
   padding-left: 28px;
 }
-.treeView .group.open .groupTit {
+.treeView .group.open > .groupTit {
   background: url(../img/ic_24_lowlink.svg) left center no-repeat;
 }
 .treeView .groupTit {
+  text-align: left;
   padding: 10px 0;
   font-size: 16px;
   padding-left: 32px;
@@ -899,6 +900,7 @@ body {
   display: none;
 }
 .treeView .item {
+  text-align: left;
   padding: 5px 0;
   padding-left: 24px;
   background: url(../img/ic_24_linking.svg) left center no-repeat;
@@ -906,6 +908,59 @@ body {
 }
 .treeView .item + .item {
   margin-top: 4px;
+}
+.treeView .addTree {
+  height: 32px;
+  font-size: 12px;
+}
+
+.grid .group.open > ul:has(.item) {
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  padding-left: 28px;
+}
+.grid .group.open > .groupTit {
+  background: url(../img/ic_24_lowlink.svg) left center no-repeat;
+}
+.grid .groupTit {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 16px;
+  padding-left: 32px;
+  background: url(../img/ic_24_highlink.svg) left center no-repeat;
+  cursor: pointer;
+}
+.grid ul:has(.item) {
+  display: none;
+}
+.grid .item {
+  text-align: left;
+  padding: 5px 0;
+  padding-left: 24px;
+  background: url(../img/ic_24_linking.svg) left center no-repeat;
+  cursor: pointer;
+}
+.grid .item + .item {
+  margin-top: 4px;
+}
+.grid .addTree {
+  height: 32px;
+  font-size: 12px;
+}
+.grid .groupTit {
+  color: #4A4A4A;
+  font-size: 14px;
+  font-weight: 400;
+}
+.grid ul:has(.item) {
+  display: block !important;
+  padding-left: 20px;
+}
+.grid ul:has(.item) .item {
+  color: #4A4A4A;
+  padding-left: 32px;
+  font-weight: 400;
 }
 
 .divisionWrap {

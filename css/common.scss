@@ -804,31 +804,24 @@ $lnbWidth : 286px;
     }
 }
 
-.treeViewWrap {
-    border-top: 1px solid #686868;
-    padding-top: 32px;
-}
-.treeView {
-    padding: 22px 32px;
-    border: 1px solid #E9E9E9;
-    border-radius: 12px;
-    height: 395px;
-    overflow-y: auto;
+
+@mixin tree {
     .group {
         // margin: 10px 0;
         &.open {
-            ul:has(.item) {
+            > ul:has(.item) {
                 display: block;
                 margin-top: 3px;
                 margin-bottom: 10px;
                 padding-left: 28px;
             }
-            .groupTit {
+            > .groupTit {
                 background: url(../img/ic_24_lowlink.svg) left center no-repeat;
             }
         }
     }
     .groupTit {
+        text-align: left;
         padding: 10px 0;
         font-size: 16px;
         padding-left: 32px;
@@ -839,12 +832,49 @@ $lnbWidth : 286px;
         display: none;
     }
     .item {
+        text-align: left;
         padding: 5px 0;
         padding-left: 24px;
         background: url(../img/ic_24_linking.svg) left center no-repeat;
         cursor: pointer;
         & + .item {
             margin-top: 4px;
+        }
+    }
+
+    .addTree {
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+.treeViewWrap {
+    border-top: 1px solid #686868;
+    padding-top: 32px;
+}
+.treeView {
+    padding: 22px 32px;
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+    height: 395px;
+    overflow-y: auto;
+    @include tree;
+}
+
+.grid {
+    @include tree;
+    .groupTit {
+        color: #4A4A4A;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    ul:has(.item) {
+        display: block !important;
+        padding-left: 20px;
+        .item {
+            color: #4A4A4A;
+            padding-left: 32px;
+            font-weight: 400;
         }
     }
 }
