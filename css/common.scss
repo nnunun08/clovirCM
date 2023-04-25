@@ -323,8 +323,79 @@ $lnbWidth : 286px;
     }
 }
 
-
-
+@mixin square {
+    width: 28px;
+    height: 28px;
+    background: #FFFFFF center no-repeat;
+    border: 1px solid #E9E9E9;
+    border-radius: 4px;
+    text-indent: -9999px;
+    overflow: hidden
+}
+@mixin controlBtn {
+    .control {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1 0 auto;
+        gap: 8px;
+        font-size: 12px;
+        .new {
+            display: flex;
+            align-items: center;
+            height: 28px;
+            background: #4EBBF7;
+            border-radius: 4px;
+            padding: 0 16px;
+            color: #fff;
+            border: 0;
+            gap: 4px;
+            font-weight: 500;
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: url(../img/ic_gridControl_new.svg) center/cover no-repeat;
+            }
+        }
+        .combobox {
+            display: flex;
+            align-items: center;
+            height: 28px;
+            border-radius: 4px;
+            padding: 0 16px;
+            padding-right: 32px;
+            color: #0098ED;
+            background: #F8FCFF url(../img/ic_gridControl_combobox.svg) right 16px center/12px no-repeat;
+            border: 1px solid #C7E9FC;
+        }
+        .df {
+            display: flex;
+            align-items: center;
+            height: 28px;
+            border-radius: 4px;
+            padding: 0 16px;
+            border: 1px solid #E9E9E9;
+            background-color: #fff;
+        }
+        .view {
+            border: 0;
+            height: 28px;
+            padding-left: 24px;
+            padding-right: 16px;
+            background: url(../img/ic_gridControl_view.svg) right center/12px no-repeat;
+        }
+        
+        .cont-list {
+            @include square;
+            background-image: url(../img/ic_list.svg);
+        }
+        .cont-grid {
+            @include square;
+            background-image: url(../img/ic_grid.svg);
+        }
+    }
+}
 
 .gridWrap {
     .top {
@@ -344,76 +415,7 @@ $lnbWidth : 286px;
                 color: #0098ED;
             }
         }
-        .control {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex: 1 0 auto;
-            gap: 8px;
-            font-size: 12px;
-            .new {
-                display: flex;
-                align-items: center;
-                height: 28px;
-                background: #4EBBF7;
-                border-radius: 4px;
-                padding: 0 16px;
-                color: #fff;
-                border: 0;
-                gap: 4px;
-                font-weight: 500;
-                &::before {
-                    content: '';
-                    width: 12px;
-                    height: 12px;
-                    background: url(../img/ic_gridControl_new.svg) center/cover no-repeat;
-                }
-            }
-            .combobox {
-                display: flex;
-                align-items: center;
-                height: 28px;
-                border-radius: 4px;
-                padding: 0 16px;
-                padding-right: 32px;
-                color: #0098ED;
-                background: #F8FCFF url(../img/ic_gridControl_combobox.svg) right 16px center/12px no-repeat;
-                border: 1px solid #C7E9FC;
-            }
-            .df {
-                display: flex;
-                align-items: center;
-                height: 28px;
-                border-radius: 4px;
-                padding: 0 16px;
-                border: 1px solid #E9E9E9;
-                background-color: #fff;
-            }
-            .view {
-                border: 0;
-                height: 28px;
-                padding-left: 24px;
-                padding-right: 16px;
-                background: url(../img/ic_gridControl_view.svg) right center/12px no-repeat;
-            }
-            @mixin square {
-                width: 28px;
-                height: 28px;
-                background: #FFFFFF center no-repeat;
-                border: 1px solid #E9E9E9;
-                border-radius: 4px;
-                text-indent: -9999px;
-                overflow: hidden
-            }
-            .cont-list {
-                @include square;
-                background-image: url(../img/ic_list.svg);
-            }
-            .cont-grid {
-                @include square;
-                background-image: url(../img/ic_grid.svg);
-            }
-        }
+        @include controlBtn;
     }
 }
 
@@ -846,9 +848,18 @@ $lnbWidth : 286px;
         height: 32px;
         font-size: 12px;
     }
+
+    .caption {
+        margin-left: 32px;
+        margin-top: 24px;
+        & + .caption {
+            margin-top: 12px;
+        }
+    }
 }
 
 .treeViewWrap {
+    max-width: 720px;
     border-top: 1px solid #686868;
     padding-top: 32px;
 }
@@ -884,6 +895,7 @@ $lnbWidth : 286px;
     border-radius: 12px;
     padding: 32px;
     display: flex;
+    @include controlBtn;
     .dividerWrap {
         padding: 16px 88px 0;
         position: relative;
@@ -913,6 +925,9 @@ $lnbWidth : 286px;
             margin-bottom: 20px;
             .searchInputWrap {
                 margin-bottom: 0;
+            }
+            .table-tit {
+                margin: 0;
             }
         }
     }
@@ -966,4 +981,29 @@ $lnbWidth : 286px;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.caption {
+    margin-left: 24px;
+    padding-left: 14px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #686868;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        background-color: #C8C8C8;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+    }
+}
+
+.flexWrap-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }

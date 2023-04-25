@@ -23,47 +23,26 @@
             <div class="left">
                 
                 <div class="flexWrap">
-                    <div class="table-tit">업무관리</div>
-                    <div>
+                    <div class="table-tit">업무관리 / 조직 관리</div>
+                    <div class="control">
                         <button class="new">신규신청</button>
                         <button class="df">삭제</button>
                     </div>
                 </div>
                 <div class="treeViewWrap">
-                    <div class="treeView">
-                        <!-- groupTit 클릭 시 group 에 opne 클래쓰 토글 -->
+                    <!-- treeview 컴포넌트 참조 height는 아래와 같이 .treeView에서 인라인으로 설정 -->
+                    <div class="treeView" style="height: 375px;">
                         <div class="group open">
-                            <div class="groupTit">모바일서비스 고도화</div>
-                            <ul>
-                                <li class="item">모바일앱웹 개발</li>
-                                <li class="item">어드민 개발</li>
-                            </ul>
-                        </div>
-                        <div class="group">
-                            <div class="groupTit">의료서비스 연구과제</div>
+                            <div class="groupTit">groupTit</div>
                             <ul>
                                 <li class="item">item</li>
                                 <li class="item">item</li>
                             </ul>
                         </div>
-
-                        <div class="group">
-                            <div class="groupTit">OTT 플랫폼 구축</div>
-                            <ul>
-                                <li class="item">item</li>
-                                <li class="item">item</li>
-                            </ul>
-                        </div>
-
-                        <div class="group open">
-                            <div class="groupTit">결제 플랫폼 구축</div>
-                            <ul>
-                                <li class="item">핀테크 서비스</li>
-                                <li class="item">해외카드연계</li>
-                                <li class="item">애플페이 서비스</li>
-                            </ul>
-                        </div>
-                        
+                        <div class="caption">신규등록 클릭 시 마다 생성</div>
+                        <div class="caption">에디팅 불가</div>
+                        <div class="caption">선택 시 우측에 해당 내용노출</div>
+                        <div class="caption">업무명 미 입력 시 해당메뉴 이탈 시 삭제됨</div>
                     </div>
                 </div>
                 
@@ -82,6 +61,7 @@
                                     업무명
                                 </th>
                                 <td>    
+                                    <!-- 에러인 경우 input에 error 클래스 넣어주세요 -->
                                     <input type="text" placeholder="영문,한글만 입력, 15자 이하" class="error">
                                 </td>
                             </tr>
@@ -107,8 +87,21 @@
                                     <input type="text" value="프로젝트 생성 시 자동 노출" readonly>
                                 </td>
                             </tr>
+                            <tr>
+                                <th>연계시스템</th>
+                                <td>
+                                    <div class="flexWrap-column">
+                                        <input type="text" value="1. 애플페이 서비스 개발" readonly>
+                                        <input type="text" value="2. Native개발" readonly>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="btnWrap">
+                    <button class="btn-m-df">취소</button>
+                    <button class="btn-m-main">저장</button>
                 </div>
             </div>
         </div>

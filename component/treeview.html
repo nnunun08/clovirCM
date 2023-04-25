@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="treeViewWrap">
+        <div class="treeView">
+            <!-- groupTit 클릭 시 부모노드 group 에 opne 클래쓰 토글 -->
+            <div class="group open">
+                <div class="groupTit">GroupTit</div>
+                <!-- 트리형태 구조를 위해 하위 요소는 ul로 감싸주세요 -->
+                <ul>
+                    <div class="group open">
+                        <div class="groupTit">2depth Group Tit</div>
+                        <ul>
+                            <li class="item">item</li>
+                            <li class="item">item</li>
+                            <li class="item">
+                                <input type="text" class="addTree" placeholder="부서명을 입력해주세요">
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div class="group">
+                        <div class="groupTit">2depth Group Tit</div>
+                        <ul>
+                            <li class="item">item</li>
+                            <li class="item">item</li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+            <div class="group open">
+                <div class="groupTit">GroupTit</div>
+                <ul>
+                    <li class="item">item</li>
+                    <li class="item">item</li>
+                </ul>
+            </div>
+
+            <div class="group">
+                <div class="groupTit">GroupTit</div>
+                <ul>
+                    <li class="item">item</li>
+                    <li class="item">item</li>
+                </ul>
+            </div>
+
+            <div class="caption">신규등록 클릭 시 마다 생성</div>
+            <div class="caption">에디팅 불가</div>
+            <div class="caption">선택 시 우측에 해당 내용노출</div>
+            <div class="caption">업무명 미 입력 시 해당메뉴 이탈 시 삭제됨</div>
+        </div>
+    </div>
+</body>
+</html>

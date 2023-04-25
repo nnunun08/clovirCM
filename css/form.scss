@@ -1,5 +1,6 @@
 // BASIC FORM
 @mixin inputHover {
+    &:focus,
     &:hover {
         color: #0064C0;
         border-color: #4EBBF7;
@@ -15,22 +16,19 @@
     line-height: 1.43;
     color: #000;
     height: 40px;
-    @include inputHover;
-}
-
-input {
-    @include default;
+    outline: none;
     &::placeholder {
         color: #ACACAC;
     }
     &:read-only {
-        background: #F9F9F9;
-        border: 1px solid #C8C8C8;
+        color: #000000 !important;
+        background: #F9F9F9 !important;
+        border: 1px solid #C8C8C8 !important;
     }
     &:disabled {
-        background: #F9F9F9;
-        border: 1px solid #E9E9E9;
-        color: #C8C8C8;
+        background: #F9F9F9 !important;
+        border: 1px solid #E9E9E9 !important;
+        color: #C8C8C8 !important;
     }
     &.error {
         border-color: #FF7997;
@@ -39,6 +37,11 @@ input {
             color: #FF7997;
         }
     }
+    @include inputHover;
+}
+
+input {
+    @include default;
 }
 
 input.searchInput {

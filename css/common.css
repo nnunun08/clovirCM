@@ -79,8 +79,7 @@ body {
   box-sizing: border-box;
   width: 40px;
   height: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .lnb {
@@ -869,6 +868,7 @@ body {
 }
 
 .treeViewWrap {
+  max-width: 720px;
   border-top: 1px solid #686868;
   padding-top: 32px;
 }
@@ -914,6 +914,13 @@ body {
   height: 32px;
   font-size: 12px;
 }
+.treeView .caption {
+  margin-left: 32px;
+  margin-top: 24px;
+}
+.treeView .caption + .caption {
+  margin-top: 12px;
+}
 
 .grid .group.open > ul:has(.item) {
   display: block;
@@ -949,6 +956,13 @@ body {
   height: 32px;
   font-size: 12px;
 }
+.grid .caption {
+  margin-left: 32px;
+  margin-top: 24px;
+}
+.grid .caption + .caption {
+  margin-top: 12px;
+}
 .grid .groupTit {
   color: #4A4A4A;
   font-size: 14px;
@@ -969,6 +983,79 @@ body {
   border-radius: 12px;
   padding: 32px;
   display: flex;
+}
+.divisionWrap .control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 0 auto;
+  gap: 8px;
+  font-size: 12px;
+}
+.divisionWrap .control .new {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background: #4EBBF7;
+  border-radius: 4px;
+  padding: 0 16px;
+  color: #fff;
+  border: 0;
+  gap: 4px;
+  font-weight: 500;
+}
+.divisionWrap .control .new::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: url(../img/ic_gridControl_new.svg) center/cover no-repeat;
+}
+.divisionWrap .control .combobox {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 16px;
+  padding-right: 32px;
+  color: #0098ED;
+  background: #F8FCFF url(../img/ic_gridControl_combobox.svg) right 16px center/12px no-repeat;
+  border: 1px solid #C7E9FC;
+}
+.divisionWrap .control .df {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 16px;
+  border: 1px solid #E9E9E9;
+  background-color: #fff;
+}
+.divisionWrap .control .view {
+  border: 0;
+  height: 28px;
+  padding-left: 24px;
+  padding-right: 16px;
+  background: url(../img/ic_gridControl_view.svg) right center/12px no-repeat;
+}
+.divisionWrap .control .cont-list {
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF center no-repeat;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-image: url(../img/ic_list.svg);
+}
+.divisionWrap .control .cont-grid {
+  width: 28px;
+  height: 28px;
+  background: #FFFFFF center no-repeat;
+  border: 1px solid #E9E9E9;
+  border-radius: 4px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-image: url(../img/ic_grid.svg);
 }
 .divisionWrap .dividerWrap {
   padding: 16px 88px 0;
@@ -1000,6 +1087,9 @@ body {
 }
 .divisionWrap .left .flexWrap .searchInputWrap {
   margin-bottom: 0;
+}
+.divisionWrap .left .flexWrap .table-tit {
+  margin: 0;
 }
 .divisionWrap .right {
   flex: 1 0 0;
@@ -1049,4 +1139,29 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.caption {
+  margin-left: 24px;
+  padding-left: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #686868;
+  position: relative;
+}
+.caption::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  background-color: #C8C8C8;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.flexWrap-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }/*# sourceMappingURL=common.css.map */
