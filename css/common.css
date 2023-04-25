@@ -59,6 +59,7 @@ body {
 .gnb .profile {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 .gnb .profile .text {
   display: flex;
@@ -584,28 +585,6 @@ body {
   padding: 40px 32px 60px;
   justify-content: center;
   gap: 8px;
-}
-
-.tab {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-.tab .item {
-  cursor: pointer;
-  width: 160px;
-  height: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #F9F9F9;
-  border-radius: 28px;
-  font-weight: 500;
-}
-.tab .item.ac {
-  background-color: #4EBBF7;
-  color: #fff;
-  font-weight: 700;
 }
 
 .step {

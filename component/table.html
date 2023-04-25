@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="tableWrap">
+        <table>
+            <tbody>
+                <tr>
+                    <th class="req">
+                        사용자 ID
+                    </th>
+                    <td>    
+                        <div class="dropdown">
+                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                            텍스트
+                            </button>
+                            <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">텍스트</button>
+                            <button class="dropdown-item" type="button">텍스트</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        사용자 ID (READONLY)
+                    </th>
+                    <td>    
+                        <input type="text" placeholder="텍스트" readonly="">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        이메일
+                    </th>
+                    <td>    
+                        <input type="text" placeholder="텍스트">
+                        <span style="margin:0 8px;">@</span>
+                        <div class="dropdown">
+                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                            선택
+                            </button>
+                            <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">naver.com</button>
+                            <button class="dropdown-item" type="button">daum.com</button>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="직접입력">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 2열 테이블에 4열 테이블이 층층이 있는 경우 별도 테이블로 분리 -->
+        <table>
+            <tbody>
+                <tr>
+                    <th>부서직급 (역할)</th>
+                    <td>    
+                        <div class="dropdown" style="width: 48%; max-width: 240px;">
+                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                팀선택
+                            </button>
+                            <div class="dropdown-menu">
+                            <button class="dropdown-item" type="button">option1</button>
+                            <button class="dropdown-item" type="button">option2</button>
+                            </div>
+                        </div>
+                        <div class="dropdown" style="width: 48%; max-width: 240px;">
+                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                직급선택
+                            </button>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">option1</button>
+                                <button class="dropdown-item" type="button">option2</button>
+                            </div>
+                        </div>
+                    </td>
+                    <th>
+                        업무
+                    </th>
+                    <td>
+                        <div class="dropdown">
+                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                업무 선택
+                            </button>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">option1</button>
+                                <button class="dropdown-item" type="button">option2</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="req">계정유형</th>
+                    <td>
+                        <div class="dropdown">
+                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                일반사용자
+                            </button>
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="button">option1</button>
+                                <button class="dropdown-item" type="button">option2</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        사용여부
+                    </th>
+                    <td>
+                        <label class="checkbox">
+                            <input type="radio" name="useYN" checked="">
+                            <span>사용</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="radio" name="useYN">
+                            <span>미사용</span>
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

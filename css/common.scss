@@ -69,6 +69,7 @@ $lnbWidth : 286px;
     .profile {
         display: flex;
         align-items: center;
+        flex: 0 0 auto;
         .text {
             display: flex;
             align-items: center;
@@ -548,27 +549,27 @@ $lnbWidth : 286px;
     }
 }
 
-.tab {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-    .item {
-        cursor: pointer;
-        width: 160px;
-        height: 52px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #F9F9F9;
-        border-radius: 28px;
-        font-weight: 500;
-        &.ac {
-            background-color: #4EBBF7;
-            color: #fff;
-            font-weight: 700;
-        }
-    }
-}
+// .tab {
+//     display: flex;
+//     gap: 8px;
+//     margin-bottom: 20px;
+//     .item {
+//         cursor: pointer;
+//         width: 160px;
+//         height: 52px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         background: #F9F9F9;
+//         border-radius: 28px;
+//         font-weight: 500;
+//         &.ac {
+//             background-color: #4EBBF7;
+//             color: #fff;
+//             font-weight: 700;
+//         }
+//     }
+// }
 
 .step {
     background: #FFFFFF;

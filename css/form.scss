@@ -1,6 +1,8 @@
 // BASIC FORM
 @mixin inputHover {
-    &:focus,
+    &:focus {
+        border-color: #4EBBF7;
+    }
     &:hover {
         color: #0064C0;
         border-color: #4EBBF7;
@@ -17,6 +19,11 @@
     color: #000;
     height: 40px;
     outline: none;
+    @include inputHover;
+}
+
+input {
+    @include default;
     &::placeholder {
         color: #ACACAC;
     }
@@ -37,11 +44,6 @@
             color: #FF7997;
         }
     }
-    @include inputHover;
-}
-
-input {
-    @include default;
 }
 
 input.searchInput {
@@ -101,7 +103,8 @@ input.calendarInput {
         width: 100%;
     }
     .dropdown-menu {
-        width: 100%;
+        min-width: 100%;
+        width: auto;
         padding: 12px;
         border: 1px solid #4EBBF7;
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
@@ -157,6 +160,7 @@ textarea {
     padding: 10px 12px;
     background: #FFFFFF;
     border: 1px solid #E9E9E9;
+    outline: none;
     border-radius: 6px;
     font-weight: 400;
     font-size: 14px;
@@ -166,6 +170,7 @@ textarea {
     &::placeholder {
         color: #ACACAC;
     }
+    @include inputHover;
 }
 
 

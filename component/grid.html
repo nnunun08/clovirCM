@@ -11,37 +11,63 @@
 
 </head>
 <body>
-    <div class="grid">
-        <table class="table">
-            <thead class="thead">
-                <tr>
-                    <th>
-                        <label class="checkbox"><input type="checkbox"></label>
-                    </th>
-                    <th>value</th>
-                    <th>value</th>
-                    <th>value</th>
-                    <th>value</th>
-                    <th>value</th>
-                    <th style="width:80px;">삭제</th>
-                    <th style="width:80px;">value</th>
-                </tr>
-            </thead>
-            <tbody class="tbody">
-                <tr>
-                    <td>
-                        <label class="checkbox"><input type="checkbox"></label>
-                    </td>
-                    <td>value</td>
-                    <td><span class="status run">배포성공</span></td>
-                    <td><button class="status stay">배포전</button></td>
-                    <td><button class="status fail">배포전</button></td>
-                    <td><button class="btn-xs-main">신청</button></td>
-                    <td><button class="btn-minus"></button></td>
-                    <td><button class="btn-plus"></button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <section class="gridWrap">
+        <div class="top">
+            <div class="result">
+                <span>검색결과</span>
+                <span class="value">24</span>
+            </div>
+            <div class="control">
+                <button class="new">신규신청</button>
+                <select class="combobox" name="" id="">
+                    <option value="Action">Action</option>
+                    <option value="Action">Action</option>
+                    <option value="Action">Action</option>
+                </select>
+                <button class="df">삭제</button>
+                <button class="df">복원</button>
+                <button class="cont-list">LIST</button>
+                <button class="cont-grid">CARD</button>
+                <select class="view" name="" id="">
+                    <option value="30개 보기">30개 보기</option>
+                    <option value="30개 보기">50개 보기</option>
+                    <option value="30개 보기">100개 보기</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid">
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th>
+                            <label class="checkbox"><input type="checkbox"></label>
+                        </th>
+                        <th>value</th>
+                        <th>value</th>
+                        <th>value</th>
+                        <th>value</th>
+                        <th>value</th>
+                        <th style="width:80px;">삭제</th>
+                        <th style="width:80px;">value</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr>
+                        <td>
+                            <label class="checkbox"><input type="checkbox"></label>
+                        </td>
+                        <td>value</td>
+                        <td><span class="status run">배포성공</span></td>
+                        <td><button class="status stay">배포전</button></td>
+                        <td><button class="status fail">배포전</button></td>
+                        <td><button class="btn-xs-main">신청</button></td>
+                        <td><button class="btn-minus"></button></td>
+                        <td><button class="btn-plus"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </body>
 </html>

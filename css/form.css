@@ -11,6 +11,13 @@ input {
   height: 40px;
   outline: none;
 }
+input:focus {
+  border-color: #4EBBF7;
+}
+input:hover {
+  color: #0064C0;
+  border-color: #4EBBF7;
+}
 input::placeholder {
   color: #ACACAC;
 }
@@ -30,10 +37,6 @@ input.error {
 input.error::placeholder {
   font-weight: 400;
   color: #FF7997;
-}
-input:focus, input:hover {
-  color: #0064C0;
-  border-color: #4EBBF7;
 }
 
 input.searchInput {
@@ -73,27 +76,10 @@ input.calendarInput {
   outline: none;
   background: url(../img/ic_16_calendar.svg) right 14px center no-repeat;
 }
-input.calendarInput::placeholder {
-  color: #ACACAC;
+input.calendarInput:focus {
+  border-color: #4EBBF7;
 }
-input.calendarInput:read-only {
-  color: #000000 !important;
-  background: #F9F9F9 !important;
-  border: 1px solid #C8C8C8 !important;
-}
-input.calendarInput:disabled {
-  background: #F9F9F9 !important;
-  border: 1px solid #E9E9E9 !important;
-  color: #C8C8C8 !important;
-}
-input.calendarInput.error {
-  border-color: #FF7997;
-}
-input.calendarInput.error::placeholder {
-  font-weight: 400;
-  color: #FF7997;
-}
-input.calendarInput:focus, input.calendarInput:hover {
+input.calendarInput:hover {
   color: #0064C0;
   border-color: #4EBBF7;
 }
@@ -117,27 +103,10 @@ input.calendarInput::-webkit-calendar-picker-indicator {
   color: #ACACAC;
   text-align: left;
 }
-.select::placeholder {
-  color: #ACACAC;
+.select:focus {
+  border-color: #4EBBF7;
 }
-.select:read-only {
-  color: #000000 !important;
-  background: #F9F9F9 !important;
-  border: 1px solid #C8C8C8 !important;
-}
-.select:disabled {
-  background: #F9F9F9 !important;
-  border: 1px solid #E9E9E9 !important;
-  color: #C8C8C8 !important;
-}
-.select.error {
-  border-color: #FF7997;
-}
-.select.error::placeholder {
-  font-weight: 400;
-  color: #FF7997;
-}
-.select:focus, .select:hover {
+.select:hover {
   color: #0064C0;
   border-color: #4EBBF7;
 }
@@ -155,7 +124,8 @@ input.calendarInput::-webkit-calendar-picker-indicator {
   width: 100%;
 }
 .dropdown .dropdown-menu {
-  width: 100%;
+  min-width: 100%;
+  width: auto;
   padding: 12px;
   border: 1px solid #4EBBF7;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
@@ -210,6 +180,7 @@ textarea {
   padding: 10px 12px;
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
+  outline: none;
   border-radius: 6px;
   font-weight: 400;
   font-size: 14px;
@@ -219,6 +190,13 @@ textarea {
 }
 textarea::placeholder {
   color: #ACACAC;
+}
+textarea:focus {
+  border-color: #4EBBF7;
+}
+textarea:hover {
+  color: #0064C0;
+  border-color: #4EBBF7;
 }
 
 .rangeWrap {

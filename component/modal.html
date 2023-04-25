@@ -8,38 +8,51 @@
     <link rel="stylesheet" href="../css/common.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <style>
+        div:has([data-toggle="modal"]) {
+            margin: 40px;
+        }
+    </style>
 </head>
 <body>
     
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-01">
-        앱관리 팝업
-    </button>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-02">
-        앱관리 팝업 - grid
-    </button>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-03">
-        앱관리 팝업 - 06. Yaml
-    </button>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-04">
-        앱관리 팝업 - 복원
-    </button>
-    
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-05">
-        앱관리 팝업 - 파이프라인 선택 
-    </button>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-06">
-        프로젝트 선택 - 업무 선택
-    </button>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-07">
-        사용자 관리 - 조직도
-    </button>
-    
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-01">
+            앱관리 팝업
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-02">
+            앱관리 팝업 - grid
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-03">
+            앱관리 팝업 - 06. Yaml
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-04">
+            앱관리 팝업 - 복원
+        </button>
+        
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-05">
+            앱관리 팝업 - 파이프라인 선택
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-06">
+            프로젝트 선택 - 업무 선택
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-07">
+            사용자 관리 - 조직도
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-08">
+            시스템설정 - ZONE 등록 / ZONE 상세정보
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-09">
+            시스템설정 - 외부 시스템 등록 / 외부 시스템 수정 / 파이프라인 등록
+        </button>
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="modal-01" tabindex="-1" aria-labelledby="modal-01Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-l">
@@ -182,110 +195,154 @@
             </div>
 
             <div class="modal-body">
-                <div class="tab">
-                    <div class="item ac">접속이력</div>
-                    <div class="item">변경이력</div>
+
+                <ul class="nav nav-tabs tab-round" id="myTab" role="tablist" style="margin-top: 0;">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="tab-01" data-toggle="tab" data-target="#contact" 
+                      type="button" role="tab" aria-controls="contact" aria-selected="true">접속이력</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="tab-02" data-toggle="tab" data-target="#change" 
+                      type="button" role="tab" aria-controls="change" aria-selected="false">변경이력</button>
+                    </li>
+                </ul>
+                <div class="tab-content tab-round-content" id="myTabContent">
+                    <!-- 첫번째탭 -->
+                    <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                        <div class="step">
+                            <div class="item complete">
+                                <span class="numbering">1</span>
+                                <span class="text">신청내역</span>
+                            </div>
+                            <div class="item complete">
+                                <span class="numbering">2</span>
+                                <span class="text">실행정보</span>
+                            </div>
+                            <div class="item focus">
+                                <span class="numbering">3</span>
+                                <span class="text">Pod</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">4</span>
+                                <span class="text">Service</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">5</span>
+                                <span class="text">Containers</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">6</span>
+                                <span class="text">Yaml</span>
+                            </div>
+                        </div>
+                        
+                        <div class="step-contents-03">
+                            <div class="grid">
+                                <table class="table">
+                                    <thead class="thead">
+                                        <tr>
+                                            <!-- evoke : th에서 inline style로 width를 지정해주세요. 지정하지 않으면 균등 width 배분됩니다. -->
+                                            <th style="width: 56px;">NO</th>
+                                            <th>파드명</th>
+                                            <th>파드IP</th>
+                                            <th>노드명</th>
+                                            <th>생성일자</th>
+                                            <th>변경일자</th>
+                                            <th>파드상태</th>
+                                            <th>준비상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>파이프라인</td>
+                                            <td>서버서버</td>
+                                            <td>4-16 Core</td>
+                                            <td>4GB-64GB</td>
+                                            <td>50-2000GB</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>디렉토리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>파이프라인</td>
+                                            <td>서버서버</td>
+                                            <td>4-16 Core</td>
+                                            <td>4GB-64GB</td>
+                                            <td>50-2000GB</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>디렉토리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>파이프라인</td>
+                                            <td>서버서버</td>
+                                            <td>4-16 Core</td>
+                                            <td>4GB-64GB</td>
+                                            <td>50-2000GB</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>디렉토리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>파이프라인</td>
+                                            <td>서버서버</td>
+                                            <td>4-16 Core</td>
+                                            <td>4GB-64GB</td>
+                                            <td>50-2000GB</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>디렉토리</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>파이프라인</td>
+                                            <td>서버서버</td>
+                                            <td>4-16 Core</td>
+                                            <td>4GB-64GB</td>
+                                            <td>50-2000GB</td>
+                                            <td>aaaaaaaa</td>
+                                            <td>디렉토리</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- 두번째탭 -->
+                    <div class="tab-pane fade" id="change" role="tabpanel" aria-labelledby="change-tab">
+
+                        <div class="step">
+                            <div class="item complete">
+                                <span class="numbering">1</span>
+                                <span class="text">신청내역</span>
+                            </div>
+                            <div class="item focus">
+                                <span class="numbering">2</span>
+                                <span class="text">실행정보</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">3</span>
+                                <span class="text">Pod</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">4</span>
+                                <span class="text">Service</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">5</span>
+                                <span class="text">Containers</span>
+                            </div>
+                            <div class="item">
+                                <span class="numbering">6</span>
+                                <span class="text">Yaml</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="step">
-                    <div class="item complete">
-                        <span class="numbering">1</span>
-                        <span class="text">신청내역</span>
-                    </div>
-                    <div class="item complete">
-                        <span class="numbering">2</span>
-                        <span class="text">실행정보</span>
-                    </div>
-                    <div class="item focus">
-                        <span class="numbering">3</span>
-                        <span class="text">Pod</span>
-                    </div>
-                    <div class="item">
-                        <span class="numbering">4</span>
-                        <span class="text">Service</span>
-                    </div>
-                    <div class="item">
-                        <span class="numbering">5</span>
-                        <span class="text">Containers</span>
-                    </div>
-                    <div class="item">
-                        <span class="numbering">6</span>
-                        <span class="text">Yaml</span>
-                    </div>
-                </div>
-                
-
-                <div class="step-contents-03">
-                    <div class="grid">
-                        <table class="table">
-                            <thead class="thead">
-                                <tr>
-                                    <!-- evoke : th에서 inline style로 width를 지정해주세요. 지정하지 않으면 균등 width 배분됩니다. -->
-                                    <th style="width: 56px;">NO</th>
-                                    <th>파드명</th>
-                                    <th>파드IP</th>
-                                    <th>노드명</th>
-                                    <th>생성일자</th>
-                                    <th>변경일자</th>
-                                    <th>파드상태</th>
-                                    <th>준비상태</th>
-                                </tr>
-                            </thead>
-                            <tbody class="tbody">
-                                <tr>
-                                    <td>1</td>
-                                    <td>파이프라인</td>
-                                    <td>서버서버</td>
-                                    <td>4-16 Core</td>
-                                    <td>4GB-64GB</td>
-                                    <td>50-2000GB</td>
-                                    <td>aaaaaaaa</td>
-                                    <td>디렉토리</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>파이프라인</td>
-                                    <td>서버서버</td>
-                                    <td>4-16 Core</td>
-                                    <td>4GB-64GB</td>
-                                    <td>50-2000GB</td>
-                                    <td>aaaaaaaa</td>
-                                    <td>디렉토리</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>파이프라인</td>
-                                    <td>서버서버</td>
-                                    <td>4-16 Core</td>
-                                    <td>4GB-64GB</td>
-                                    <td>50-2000GB</td>
-                                    <td>aaaaaaaa</td>
-                                    <td>디렉토리</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>파이프라인</td>
-                                    <td>서버서버</td>
-                                    <td>4-16 Core</td>
-                                    <td>4GB-64GB</td>
-                                    <td>50-2000GB</td>
-                                    <td>aaaaaaaa</td>
-                                    <td>디렉토리</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>파이프라인</td>
-                                    <td>서버서버</td>
-                                    <td>4-16 Core</td>
-                                    <td>4GB-64GB</td>
-                                    <td>50-2000GB</td>
-                                    <td>aaaaaaaa</td>
-                                    <td>디렉토리</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
             </div>
 
             <div class="modal-footer">
@@ -547,7 +604,6 @@
         </div>
     </div>
 
-
     <div class="modal fade" id="modal-07" tabindex="-1" aria-labelledby="modal-07Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-m">
         <div class="modal-content">
@@ -650,6 +706,162 @@
             <div class="modal-footer">
                 <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
                 <button type="button" class="btn-m-main">선택</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-08" tabindex="-1" aria-labelledby="modal-08Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-m">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-08Label">ZONE 등록 / ZONE 상세정보</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="req">
+                                    ZONE ID
+                                </th>
+                                <td>    
+                                    <input type="text" placeholder="영문,한글, 숫자 6자 이상 입력">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">
+                                    ZONE ID
+                                </th>
+                                <td>    
+                                    <input type="text" placeholder="영문,한글, 숫자 6자 이상 입력" readonly value="ZONE999">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    시스템 유형
+                                </th>
+                                <td>    
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해 주세요</button>
+                                        <div class="dropdown-menu">
+                                            <button class="dropdown-item" type="button">option1</button>
+                                            <button class="dropdown-item" type="button">option2</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    클러스터
+                                </th>
+                                <td>    
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해 주세요</button>
+                                        <div class="dropdown-menu">
+                                            <button class="dropdown-item" type="button">option1</button>
+                                            <button class="dropdown-item" type="button">option2</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Profile
+                                </th>
+                                <td>    
+                                    <div class="dropdown" style="width:175px;">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해 주세요</button>
+                                        <div class="dropdown-menu">
+                                            <button class="dropdown-item" type="button">option1</button>
+                                            <button class="dropdown-item" type="button">option2</button>
+                                        </div>
+                                    </div>
+                                    <input style="width:184px;" type="text" placeholder="직접입력">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
+                <button type="button" class="btn-m-main">저장</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-09" tabindex="-1" aria-labelledby="modal-09Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-m">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-09Label">외부 시스템 등록 / 외부 시스템 수정 / 파이프라인 등록</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="req">외부시스템 이름</th>
+                                <td>    
+                                    <input type="text" placeholder="영문,한글, 숫자 6자 이상 입력" readonly value="수정불가">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">인풋</th>
+                                <td>    
+                                    <input type="text" placeholder="입력해주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    드롭다운
+                                </th>
+                                <td>    
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해 주세요</button>
+                                        <div class="dropdown-menu">
+                                            <button class="dropdown-item" type="button">option1</button>
+                                            <button class="dropdown-item" type="button">option2</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>설명</th>
+                                <td>    
+                                    <textarea style="width: 100%; height:80px;" placeholder="30자 이내로 입력"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>체크박스(택1)</th>
+                                <td>
+                                    <label class="checkbox">
+                                        <input type="radio" name="useYN" checked="">
+                                        <span>전체</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="radio" name="useYN">
+                                        <span>선택</span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
+                <button type="button" class="btn-m-main">저장</button>
             </div>
         </div>
         </div>
