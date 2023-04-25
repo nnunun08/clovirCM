@@ -25,8 +25,7 @@ th {
   line-height: 1.43;
   color: #4A4A4A;
   height: 68px;
-  width: 13%;
-  max-width: 200px;
+  width: 200px;
   text-align: center;
 }
 th.req::before {

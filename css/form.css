@@ -14,8 +14,15 @@ input:hover {
   color: #0064C0;
   border-color: #4EBBF7;
 }
+input::-moz-placeholder {
+  color: #ACACAC;
+}
 input::placeholder {
   color: #ACACAC;
+}
+input:-moz-read-only {
+  background: #F9F9F9;
+  border: 1px solid #C8C8C8;
 }
 input:read-only {
   background: #F9F9F9;
@@ -25,6 +32,17 @@ input:disabled {
   background: #F9F9F9;
   border: 1px solid #E9E9E9;
   color: #C8C8C8;
+}
+input.error {
+  border-color: #FF7997;
+}
+input.error::-moz-placeholder {
+  font-weight: 400;
+  color: #FF7997;
+}
+input.error::placeholder {
+  font-weight: 400;
+  color: #FF7997;
 }
 
 input.searchInput {
@@ -165,6 +183,9 @@ textarea {
   line-height: 1.43;
   color: #000;
   resize: none;
+}
+textarea::-moz-placeholder {
+  color: #ACACAC;
 }
 textarea::placeholder {
   color: #ACACAC;

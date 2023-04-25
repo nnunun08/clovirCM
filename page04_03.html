@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div data-include-path="./component/gnb.html"></div>
+    <div data-include-path="./component/lnb.html"></div>
+
+    <div class="cmContent">
+        <div class="h1">업무 관리</div>
+
+        <div class="divisionWrap">
+            <div class="left">
+                
+                <div class="flexWrap">
+                    <div class="table-tit">업무관리</div>
+                    <div>
+                        <button class="new">신규신청</button>
+                        <button class="df">삭제</button>
+                    </div>
+                </div>
+                <div class="treeViewWrap">
+                    <div class="treeView">
+                        <!-- groupTit 클릭 시 group 에 opne 클래쓰 토글 -->
+                        <div class="group open">
+                            <div class="groupTit">모바일서비스 고도화</div>
+                            <ul>
+                                <li class="item">모바일앱웹 개발</li>
+                                <li class="item">어드민 개발</li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <div class="groupTit">의료서비스 연구과제</div>
+                            <ul>
+                                <li class="item">item</li>
+                                <li class="item">item</li>
+                            </ul>
+                        </div>
+
+                        <div class="group">
+                            <div class="groupTit">OTT 플랫폼 구축</div>
+                            <ul>
+                                <li class="item">item</li>
+                                <li class="item">item</li>
+                            </ul>
+                        </div>
+
+                        <div class="group open">
+                            <div class="groupTit">결제 플랫폼 구축</div>
+                            <ul>
+                                <li class="item">핀테크 서비스</li>
+                                <li class="item">해외카드연계</li>
+                                <li class="item">애플페이 서비스</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="dividerWrap">
+                <div class="divider"></div>
+                <div class="arrowImg"></div>
+            </div>
+            <div class="right">
+                <div class="table-tit">업무 상세</div>
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    업무명
+                                </th>
+                                <td>    
+                                    <input type="text" placeholder="영문,한글만 입력, 15자 이하" class="error">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>업무명</th>
+                                <td>
+                                    <input type="text" placeholder="업무선택">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>업무설명</th>
+                                <td>
+                                    <div class="flexWrap">
+                                        <span>\</span><input type="text" placeholder="시스템운영 1팀 업무">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    업무설명
+                                </th>
+                                <td>
+                                    <input type="text" value="프로젝트 생성 시 자동 노출" readonly>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="btnWrap">
+            <button class="btn-xl-df">이전</button>
+            <button class="btn-xl-sub">임시저장</button>
+            <button class="btn-xl-main">다음</button>
+        </div>
+    </div>
+</body>
+</html>

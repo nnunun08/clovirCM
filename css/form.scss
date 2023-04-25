@@ -32,6 +32,13 @@ input {
         border: 1px solid #E9E9E9;
         color: #C8C8C8;
     }
+    &.error {
+        border-color: #FF7997;
+        &::placeholder {
+            font-weight: 400;
+            color: #FF7997;
+        }
+    }
 }
 
 input.searchInput {
