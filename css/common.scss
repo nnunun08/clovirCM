@@ -982,6 +982,9 @@ $lnbWidth : 286px;
     display: flex;
     align-items: center;
     gap: 8px;
+    &:has(.checkbox) {
+        gap: 0;
+    }
 }
 
 .caption {
@@ -1010,16 +1013,17 @@ $lnbWidth : 286px;
 }
 
 .appPackaging-nav {
+    background-color: #fff;
     padding: 48px;
-    padding-right: 0;
+    padding-right:0;
     width: auto;
     min-height: calc(100vh - 126px);
     height: 100%;
     box-sizing: border-box;
-    position: fixed;
+    position: absolute;
     top: 126px;
     left: 0;
-    z-index: 1;
+    // z-index: 1;
     border: 0;
     flex-direction: column;
     gap: 8px;
@@ -1084,4 +1088,64 @@ $lnbWidth : 286px;
             
         }
     }
+}
+@mixin addTag {
+    .addTag {
+        .result {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            .tagItem {
+                margin-top: 14px;
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                height: 28px;
+                padding: 0 12px;
+                border: 1px solid #C7E9FC;
+                border-radius: 8px;
+                font-weight: 500;
+                font-size: 12px;
+                color: #0098ED;
+                .tagRemove {
+                    width: 12px;
+                    height: 12px;
+                    background: url(../img/ic_12_delete.svg) center/cover no-repeat;
+                    text-indent: -9999px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@include addTag;
+
+.addImg {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    .caption {
+        margin-left: 3px;
+    }
+    input {
+        background: #FFFFFF !important;
+        border: 1px solid #E9E9E9 !important;
+    }
+}
+
+.appPackaginDesc {
+    margin-top: -4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #4A4A4A;
+    margin-bottom: 32px;
+}
+.codeView {
+    width: 100%;
+    height: 640px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    overflow: auto;
 }

@@ -7,6 +7,12 @@
 .tableWrap + .tableWrap {
   margin-top: 20px;
 }
+.tableWrap.wide th {
+  width: 327px;
+}
+.tableWrap.wide .flexWrap {
+  gap: 12px;
+}
 
 table {
   table-layout: fixed;
@@ -60,4 +66,62 @@ td:has(.rangeWrap) {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 20px;
+}
+.table-tit .circle-minus {
+  margin-left: 8px;
+}
+
+.mergeTable {
+  position: relative;
+  width: calc(100% - 175px);
+}
+.mergeTable .mergeCell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  background-color: #F9F9F9;
+  border: 1px solid #E9E9E9;
+  border-top: 0;
+  border-left: 0;
+}
+.mergeTable .half {
+  margin-left: 175px;
+}
+.mergeTable .half th {
+  width: 152px;
+}
+
+.collapseWrap th:first-child {
+  text-align: left;
+  padding-left: 60px;
+}
+.collapseWrap .controlRow th {
+  position: relative;
+  padding-right: 36px;
+  color: #000;
+}
+.collapseWrap .controlRow th .collapseArr {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background: url(../img/ic_16_collapse_arr.svg) center no-repeat;
+}
+.collapseWrap .controlRow th[aria-expanded=false] .collapseArr {
+  transform: rotate(180deg);
+}
+.collapseWrap .subRow th:first-child::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background: url(../img/ic_16_minus.svg) center no-repeat;
+  margin-right: 2px;
 }/*# sourceMappingURL=table.css.map */

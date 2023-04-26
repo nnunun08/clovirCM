@@ -165,6 +165,9 @@ textarea {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.43;
+    width: 100%;
+    max-width: 465px;
+    height: 80px;
     color: #000;
     resize: none;
     &::placeholder {

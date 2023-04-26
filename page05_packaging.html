@@ -44,7 +44,6 @@
         <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-01" 
             data-toggle="tab" data-target="#appPackaging01" type="button" role="tab" aria-controls="appPackaging01" 
             aria-selected="true">기본정보</button></li>
-
         <li class="nav-item" role="presentation"><button class="nav-link" id="tab-02" 
             data-toggle="tab" data-target="#appPackaging02" type="button" role="tab" aria-controls="appPackaging02" 
             aria-selected="false">Service</button></li>
@@ -69,9 +68,9 @@
     <div class="cmContent">
         <div class="h1">앱 탬플릿 신규등록</div>
 
-        <div class="tab-content tab-round-content" id="step01">
+        <div class="tab-content">
             <!-- 스텝1 -->
-            <div class="tab-pane fade" id="appPackaging01" role="tabpanel" aria-labelledby="appPackaging01-tab">
+            <div class="tab-pane fade active show" id="appPackaging01" role="tabpanel" aria-labelledby="appPackaging01-tab">
                 <div class="tableWrap">
                     <table>
                         <tbody>
@@ -85,15 +84,182 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>계정유형 설명</th>
+                                <th class="req">Tag</th>
                                 <td>
-                                    <!-- input의 width는 최대 280px 으로 설정(max-width:280px)되어 있습니다. 컨텐츠에 따라 width 축소 또는 확장이 필요한 경우 인라인스타일 max-width로 아래와 같이 제어해주세요 -->
-                                    <input type="text" placeholder="20자 이내 입력" style="max-width:420px">
+                                    <div class="addTag">
+                                        <div class="searchInputWrap">
+                                            <input type="text" class="searchInput" placeholder="Tag 입력">
+                                            <button class="searchInputBtn">검색</button>
+                                        </div>
+                                        <div class="result">
+                                            <span class="tagItem">#해시태그<i class="tagRemove">X</i></span>
+                                            <span class="tagItem">#리니지개발<i class="tagRemove">X</i></span>
+                                            <span class="tagItem">#해시태그<i class="tagRemove">X</i></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">아이콘 등록</th>
+                                <td>    
+                                    <div class="addImg">
+                                        <input type="text" placeholder="이미지를 선택 해 주세요" readonly>
+                                        <button class="btn-s-main-line">파일찾기</button>
+                                        <div class="caption">PNG, JPG만 등록 가능 SIZE 200*200</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>연관 프로젝트</th>
+                                <td>
+                                    <div class="flexWrap">
+                                        <label class="checkbox">
+                                            <input type="radio" name="useYN" checked="">
+                                            <span>전체</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="useYN">
+                                            <span>선택</span>
+                                        </label>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                              <button class="dropdown-item" type="button">opt1</button>
+                                              <button class="dropdown-item" type="button">opt2</button>
+                                              <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <th>
-                                    사용여부
+                                    설명
+                                </th>
+                                <td>
+                                    <textarea placeholder="20자 이내로 입력"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <!-- 스텝2 -->
+            <div class="tab-pane fade" id="appPackaging02" role="tabpanel" aria-labelledby="appPackaging02-tab">
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Service Type
+                                </th>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                        <div class="dropdown-menu">
+                                          <button class="dropdown-item" type="button">opt1</button>
+                                          <button class="dropdown-item" type="button">opt2</button>
+                                          <button class="dropdown-item" type="button">opt3</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-tit" style="margin-top:40px;">Ports 설정</div>
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Port
+                                </th>
+                                <td>
+                                    <input type="text" placeholder="0~65535">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    TargetPort
+                                </th>
+                                <td>
+                                    <input type="text" placeholder="0~65535">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-tit" style="margin-top:40px;">
+                    Ports 설정
+                    <button class="circle-minus"></button>
+                </div>
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Port
+                                </th>
+                                <td>
+                                    <input type="text" placeholder="0~65535">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    TargetPort
+                                </th>
+                                <td>
+                                    <input type="text" placeholder="0~65535">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn-xs-main-line" style="margin-top: 20px;"><i class="ic-add"></i>Port추가</button>
+            </div>
+
+            <!-- 스텝3 -->
+            <div class="tab-pane fade" id="appPackaging03" role="tabpanel" aria-labelledby="appPackaging03-tab">
+                <div class="table-tit">PVC 설정</div>
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>PVC Name</th>
+                                <td><input type="text" placeholder="0~65535"></td>
+                            </tr>
+                            <tr>
+                                <th>Access Mode</th>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                        <div class="dropdown-menu">
+                                          <button class="dropdown-item" type="button">opt1</button>
+                                          <button class="dropdown-item" type="button">opt2</button>
+                                          <button class="dropdown-item" type="button">opt3</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Disk (GB)</th>
+                                <td>
+                                    <input type="text" placeholder="최소Disk">
+                                    <span style="margin-left: 10px;">GB</span>
+                                    <input type="text" placeholder="최대Disk">
+                                    <span style="margin-left: 10px;">GB</span>
+                                    <span class="caption" style="margin-left: 58px;">사용자가 선택 가능한 최소/최대 Disk 입니다.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>StorageClass 사용여부
+                                    <button class="ic-guide"></button>
                                 </th>
                                 <td>
                                     <label class="checkbox">
@@ -106,14 +272,344 @@
                                     </label>
                                 </td>
                             </tr>
+                            <tr>
+                                <th>StorageClass Name</th>
+                                <td>
+                                    <input type="text" placeholder="이름입력">
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
+                <button class="btn-xs-main-line" style="margin-top: 20px;"><i class="ic-add"></i>PVC 추가</button>
             </div>
-    
-            <!-- 스텝2 -->
-            <div class="tab-pane fade active show" id="appPackaging02" role="tabpanel" aria-labelledby="appPackaging02-tab">
-                ...
+
+            <!-- 스텝 4 -->
+            <div class="tab-pane fade" id="appPackaging04" role="tabpanel" aria-labelledby="appPackaging04-tab">
+                스텝2,3 구조 참조
+            </div>
+
+            <!-- 스텝 5 -->
+            <div class="tab-pane fade" id="appPackaging05" role="tabpanel" aria-labelledby="appPackaging05-tab">
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="req">Replicas</th>
+                                <td><input type="text" placeholder="이름 입력"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-tit" style="margin-top: 40px;">Container</div>
+                <div class="tableWrap wide">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Base Image URL</th>
+                                <td><input type="text" placeholder="직접 입력"></td>
+                            </tr>
+                            <tr>
+                                <th>Container Name</th>
+                                <td><input type="text" placeholder="직접 입력"></td>
+                            </tr>
+                            <tr>
+                                <th>Container Ports</th>
+                                <td><input type="text" placeholder="직접 입력"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 2열 th start : mergeTable -->
+                    <div  class="mergeTable">
+                        <div class="mergeCell">Volume Mount</div>
+                        <table class="half">
+                            <tbody>
+                                <tr>
+                                    <th>Volume Name</th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" type="button">opt1</button>
+                                                <button class="dropdown-item" type="button">opt2</button>
+                                                <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Mount path</th>
+                                    <td>
+                                        <div class="flexWrap">
+                                            <input type="text" placeholder="PVC1">
+                                            <input type="text" placeholder="Mount path 입력">
+                                            <button class="circle-minus"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Mount path</th>
+                                    <td>
+                                        <div class="flexWrap">
+                                            <input type="text" placeholder="PVC1">
+                                            <input type="text" placeholder="Mount path 입력">
+                                            <button class="circle-minus"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Mount path</th>
+                                    <td>
+                                        <div class="flexWrap">
+                                            <input type="text" placeholder="PVC1">
+                                            <input type="text" placeholder="Mount path 입력">
+                                            <button class="circle-minus"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <!-- evoke0427 : row추가시 아래와 같은 tr 추가 -->
+                                <!-- 
+                                <tr>
+                                    <th>Mount path</th>
+                                    <td>
+                                        <div class="flexWrap">
+                                            <input type="text" placeholder="PVC1">
+                                            <input type="text" placeholder="Mount path 입력">
+                                            <button class="circle-minus"></button>
+                                        </div>
+                                    </td>
+                                </tr> 
+                                -->
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 2열 th end -->
+
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="req">CPU (Milccore)</th>
+                                <td>
+                                    <div class="flexWrap">
+                                        <input type="text" placeholder="최소값">
+                                        <span>~</span>
+                                        <input type="text" placeholder="최대값">
+                                        <span>Milccore</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">
+                                    Memory (GB)
+                                    <button class="ic-guide"></button>
+                                </th>
+                                <td>
+                                    <div class="flexWrap">
+                                        <input type="text" placeholder="최소값">
+                                        <span>~</span>
+                                        <input type="text" placeholder="최대값">
+                                        <span>Milccore</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+
+                    <div class="collapseWrap">
+                        <!-- 1depth row -->
+                        <table class="controlRow">
+                            <tbody>
+                                <tr>
+                                    <th data-toggle="collapse" data-target="#collapse01" aria-expanded="false" aria-controls="collapse01">
+                                        Liveness Probe Type
+                                        <button class="ic-guide"></button>
+                                        <i class="collapseArr"></i>
+                                    </th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" type="button">opt1</button>
+                                                <button class="dropdown-item" type="button">opt2</button>
+                                                <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 2depth row -->
+                        <div class="collapse subRow" id="collapse01">
+                            <table>
+                                <tr>
+                                    <th><span>Command</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Period Seconds</th>
+                                    <td><input type="text" placeholder="직접입력" style="max-width:100%;"></td>
+                                    <th style="width:215px">successThreshold</th>
+                                    <td><input type="text" placeholder="직접입력" style="max-width:100%;"></td>
+                                    <th style="width:215px">successThreshold</th>
+                                    <td><input type="text" placeholder="직접입력" style="max-width:100%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="collapseWrap">
+                        <!-- 1depth row -->
+                        <table class="controlRow">
+                            <tbody>
+                                <tr>
+                                    <th data-toggle="collapse" data-target="#collapse02" aria-expanded="false" aria-controls="collapse02">
+                                        ReadinessProbe Type
+                                        <button class="ic-guide"></button>
+                                        <i class="collapseArr"></i>
+                                    </th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" type="button">opt1</button>
+                                                <button class="dropdown-item" type="button">opt2</button>
+                                                <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 2depth row -->
+                        <div class="collapse subRow" id="collapse02">
+                            <table>
+                                <tr>
+                                    <th><span>Command</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th>Period Seconds</th>
+                                    <td><input type="text" placeholder="직접입력" style="max-width:100%;"></td>
+                                    <th style="width:215px">successThreshold</th>
+                                    <td><input type="text" placeholder="직접입력" style="max-width:100%;"></td>
+                                    <th style="width:215px">successThreshold</th>
+                                    <td><input type="text" placeholder="직접입력" style="max-width:100%;"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="collapseWrap">
+                        <!-- 1depth row -->
+                        <table class="controlRow">
+                            <tbody>
+                                <tr>
+                                    <th data-toggle="collapse" data-target="#collapse03" aria-expanded="false" aria-controls="collapse03">
+                                        Livecycle
+                                        <button class="ic-guide"></button>
+                                        <i class="collapseArr"></i>
+                                    </th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" type="button">opt1</button>
+                                                <button class="dropdown-item" type="button">opt2</button>
+                                                <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 2depth row -->
+                        <div class="collapse subRow" id="collapse03">
+                            <table>
+                                <tr>
+                                    <th><span>postStart-command</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                                <tr>
+                                    <th><span>prestop-command</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="collapseWrap">
+                        <!-- 1depth row -->
+                        <table class="controlRow">
+                            <tbody>
+                                <tr>
+                                    <th data-toggle="collapse" data-target="#collapse04" aria-expanded="false" aria-controls="collapse04">
+                                        환경변수
+                                        <i class="collapseArr"></i>
+                                    </th>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item" type="button">opt1</button>
+                                                <button class="dropdown-item" type="button">opt2</button>
+                                                <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 2depth row -->
+                        <div class="collapse subRow" id="collapse04">
+                            <table>
+                                <tr>
+                                    <th><span>변수명</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                                <tr>
+                                    <th><span>유형</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                                <tr>
+                                    <th><span>값</span></th>
+                                    <td><input type="text" placeholder="직접입력"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-xs-main-line" style="margin-top: 20px;"><i class="ic-add"></i>Container 추가</button>
+            </div>
+
+            <!-- 스텝6 -->
+            <div class="tab-pane fade" id="appPackaging06" role="tabpanel" aria-labelledby="appPackaging06-tab">
+                <div class="table-tit">Yaml</div>
+                <p class="appPackaginDesc">쿠버네티스의 다양한 옵션 및 직접 추가할 수 있습니다. 단, disk size, cpu, memory의 값은 여기서 수정할 수 없습니다.</p>
+
+                <div class="codeView">
+
+                </div>
+            </div>
+
+            <!-- 스텝7 -->
+            <!-- 스텝7에 도달하면 btnWrap 제거 -->
+            <div class="tab-pane fade" id="appPackaging07" role="tabpanel" aria-labelledby="appPackaging07-tab">
+                <div class="apply-step-success" style="margin-top: 100px;">
+                    <img src="./img/bg_complete.svg" alt="apply-step-success">
+                    <div class="mesg"><b> 탬플릿 생성이 완료</b>되었습니다.</div>
+                    <button class="btn-xl-main">확인</button>
+                </div>
             </div>
         </div>
         
@@ -121,7 +617,7 @@
         <div class="btnWrap">
             <button class="btn-xl-df">취소</button>
             <button class="btn-xl-sub">임시저장</button>
-            <button class="btn-xl-main">저장</button>
+            <button class="btn-xl-main">다음</button>
         </div>
 
 

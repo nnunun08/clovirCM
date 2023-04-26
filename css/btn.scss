@@ -193,3 +193,23 @@ button .ic-list {
     height: 12px;
     background: url(../img/ic_12_list.svg) center no-repeat;
 }
+
+button .ic-add {
+    width: 12px;
+    height: 12px;
+    background: url(../img/ic_12_plus.svg) center no-repeat;
+}
+.ic-guide {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    background: url(../img/ic_16_guide.svg) center no-repeat;
+    vertical-align: middle;
+}
+
+.circle-minus {
+    border: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../img/ic_20_cirlce_minus.svg) center no-repeat;
+}
