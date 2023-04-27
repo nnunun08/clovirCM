@@ -869,6 +869,8 @@ body {
   background: url(../img/ic_24_lowlink.svg) left center no-repeat;
 }
 .treeView .groupTit {
+  display: block;
+  border: 0;
   text-align: left;
   padding: 10px 0;
   font-size: 16px;
@@ -911,6 +913,8 @@ body {
   background: url(../img/ic_24_lowlink.svg) left center no-repeat;
 }
 .grid .groupTit {
+  display: block;
+  border: 0;
   text-align: left;
   padding: 10px 0;
   font-size: 16px;

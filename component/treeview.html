@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClovirCM</title>
     <link rel="stylesheet" href="../css/common.css">
+
+    <!-- jstree css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 
@@ -16,6 +20,10 @@
             <!-- groupTit 클릭 시 부모노드 group 에 opne 클래쓰 토글 -->
             <div class="group open">
                 <div class="groupTit">GroupTit</div>
+                <ul>
+                    <li class="item">item</li>
+                    <li class="item">item</li>
+                </ul>
                 <!-- 트리형태 구조를 위해 하위 요소는 ul로 감싸주세요 -->
                 <ul>
                     <div class="group open">
@@ -56,11 +64,83 @@
                 </ul>
             </div>
 
+            <!-- 요청 피드백 예시 -->
+            <div class="group open">
+                <!-- groupTit = trigger요소. 클릭 시 부모요소 group에 토글 .open -->
+                <!-- groupTit div 또는 button 이어도 상관 없게 css 업데이트 했습니다. -->
+                <button class="groupTit" onclick="alert('click')">운영팀</button>
+
+                <!-- 트리 레이아웃. groupTit 다음 형제요소로 ul 필요 (트리아이템 Wrapper) -->
+                <ul>
+
+                    <!-- 하위 메뉴를 가지고 있는 경우 다시 group > groupTit, ul -->
+                    <div class="group open">
+                        <button class="groupTit" onclick="alert('click')">App 운영</button>
+
+                        <!-- 트리 최종 요소 = li.class="item" -->
+                        <ul>
+                            <li class="item">App 하위 1</li>
+                            <li class="item">App 하위 2</li>
+                        </ul>
+                    </div>
+
+                    <!-- 닫은 경우 group 에 open 제거 -->
+                    <div class="group">
+                        <button class="groupTit" onclick="alert('click')">App 운영2</button>
+
+                        <!-- 트리 최종 요소 = li.class="item" -->
+                        <ul>
+                            <li class="item">App 하위 1</li>
+                            <li class="item">App 하위 2</li>
+                        </ul>
+                    </div>
+
+                    <!-- 트리 최종 요소 = li.class="item" -->
+                    <li class="item">시스템 운영</li>
+                </ul>
+            </div>
+
+
             <div class="caption">신규등록 클릭 시 마다 생성</div>
             <div class="caption">에디팅 불가</div>
             <div class="caption">선택 시 우측에 해당 내용노출</div>
             <div class="caption">업무명 미 입력 시 해당메뉴 이탈 시 삭제됨</div>
         </div>
     </div>
+
+
+
+    <!-- <div id="jstree">
+        <ul>
+          <li>Root node 1
+            <ul>
+              <li id="child_node_1">Child node 1</li>
+              <li>Child node 2</li>
+            </ul>
+          </li>
+          <li>Root node 2</li>
+        </ul>
+      </div>
+      <button>demo button</button>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+      <script>
+          $(function () {
+            
+              $('#jstree').jstree();
+             
+              $('#jstree').on("changed.jstree", function (e, data) {
+              console.log(data.selected);
+              });
+            
+              $('button').on('click', function () {
+              $('#jstree').jstree(true).select_node('child_node_1');
+              $('#jstree').jstree('select_node', 'child_node_1');
+              $.jstree.reference('#jstree').select_node('child_node_1');
+              });
+          });
+      </script> -->
 </body>
 </html>
