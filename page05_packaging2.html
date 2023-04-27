@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div class="gnb">
+        <a href="#">
+            <img src="../img/logo_cm.svg" alt="logo">
+        </a>
+        <ul class="menu">
+            <li><a href="#">앱 관리</a></li>
+            <li><a href="#">프로젝트 관리</a></li>
+            <li><a href="#">결재함</a></li>
+            <li><a href="#">사용자 관리</a></li>
+            <li class="ac"><a href="#">서비스 설정</a></li>
+            <li><a href="#">시스템</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">대시보드</a></li>
+        </ul>
+        <div class="profile">
+            <div class="text">
+                <span class="team">[팀명]</span>
+                <span class="name">관리자</span>
+                <span class="after">님</span>
+            </div>
+            <img class="profileImg" src="../img/ic_profile.svg" alt="profile">
+        </div>
+    </div>
+
+    
+
+    <ul class="nav nav-tabs appPackaging-nav" id="myTab" role="tablist">
+
+        <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-01" 
+            data-toggle="tab" data-target="#appPackaging01" type="button" role="tab" aria-controls="appPackaging01" 
+            aria-selected="true">기본정보</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="tab-02" 
+            data-toggle="tab" data-target="#appPackaging02" type="button" role="tab" aria-controls="appPackaging02" 
+            aria-selected="false">앱탬플릿 검색</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="tab-03" 
+            data-toggle="tab" data-target="#appPackaging03" type="button" role="tab" aria-controls="appPackaging03" 
+            aria-selected="false">공통 PVC</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="tab-04" 
+            data-toggle="tab" data-target="#appPackaging04" type="button" role="tab" aria-controls="appPackaging04" 
+            aria-selected="false">앱탬플릿</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="tab-05" 
+            data-toggle="tab" data-target="#appPackaging05" type="button" role="tab" aria-controls="appPackaging05" 
+            aria-selected="false">공통 Ingress</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="tab-06" 
+            data-toggle="tab" data-target="#appPackaging06" type="button" role="tab" aria-controls="appPackaging06" 
+            aria-selected="false">앱 우선순위</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" id="tab-07" 
+            data-toggle="tab" data-target="#appPackaging07" type="button" role="tab" aria-controls="appPackaging07" 
+            aria-selected="false">완료</button></li>
+
+    </ul>
+
+    <div class="cmContent">
+        <div class="h1">앱 패키지 탬플릿 신규등록</div>
+
+        <div class="tab-content">
+            <!-- 스텝1 -->
+            <div class="tab-pane fade active show" id="appPackaging01" role="tabpanel" aria-labelledby="appPackaging01-tab">
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="req">
+                                    템플릿 명
+                                </th>
+                                <td>    
+                                    <input type="text" placeholder="영문,한글만 입력, 15자 이하">
+                                    <span class="caption">영문,한글 이용하여 최대 15자까지 입력가능</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">Tag</th>
+                                <td>
+                                    <div class="addTag">
+                                        <div class="searchInputWrap">
+                                            <input type="text" class="searchInput" placeholder="Tag 입력">
+                                            <button class="searchInputBtn">검색</button>
+                                        </div>
+                                        <div class="result">
+                                            <span class="tagItem">#해시태그<i class="tagRemove">X</i></span>
+                                            <span class="tagItem">#리니지개발<i class="tagRemove">X</i></span>
+                                            <span class="tagItem">#해시태그<i class="tagRemove">X</i></span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">아이콘 등록</th>
+                                <td>    
+                                    <div class="addImg">
+                                        <input type="text" placeholder="이미지를 선택 해 주세요" readonly>
+                                        <button class="btn-s-main-line">파일찾기</button>
+                                        <div class="caption">PNG, JPG만 등록 가능 SIZE 200*200</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>연관 프로젝트</th>
+                                <td>
+                                    <div class="flexWrap">
+                                        <label class="checkbox">
+                                            <input type="radio" name="useYN1" checked="">
+                                            <span>전체</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="radio" name="useYN1">
+                                            <span>선택</span>
+                                        </label>
+                                        <div class="dropdown">
+                                            <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                            <div class="dropdown-menu">
+                                              <button class="dropdown-item" type="button">opt1</button>
+                                              <button class="dropdown-item" type="button">opt2</button>
+                                              <button class="dropdown-item" type="button">opt3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    설명
+                                </th>
+                                <td>
+                                    <textarea placeholder="20자 이내로 입력"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <!-- 스텝2 -->
+            <div class="tab-pane fade" id="appPackaging02" role="tabpanel" aria-labelledby="appPackaging02-tab">
+                
+                <div class="divisionWrap">
+                    <div class="left">
+                        <div class="flexWrap">
+                            <div class="grid-tit" style="margin-bottom: 0;">앱 탬플릿</div>
+                            
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span>전체 사용자</span>
+                            </label>
+                        </div>
+        
+                        <div class="grid">
+                            <table class="table">
+                                <thead class="thead">
+                                    <tr>
+                                        <th>
+                                            <label class="checkbox"><input type="checkbox"></label>
+                                        </th>
+                                        <th>유형</th>
+                                        <th>탬플릿 명</th>
+                                        <th>앱설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr>
+                                        <td>
+                                            <label class="checkbox"><input type="checkbox"></label>
+                                        </td>
+                                        <td>value</td>
+                                        <td>value</td>
+                                        <td>value</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="dividerWrap">
+                        <div class="divider"></div>
+                        <div class="arrowImg"></div>
+                    </div>
+                    <div class="right">
+                        <div class="grid-tit" style="margin-top: 0;">생성 목록</div>
+                        <div class="grid">
+                            <table class="table">
+                                <thead class="thead">
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>유형</th>
+                                        <th>탬플릿명</th>
+                                        <th style="width:80px;">삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>value</td>
+                                        <td>value</td>
+                                        <td><button class="btn-minus"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>value</td>
+                                        <td>value</td>
+                                        <td><button class="btn-minus"></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>value</td>
+                                        <td>value</td>
+                                        <td><button class="btn-minus"></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 스텝3 -->
+            <div class="tab-pane fade" id="appPackaging03" role="tabpanel" aria-labelledby="appPackaging03-tab">
+                <div class="table-tit">PVC 설정</div>
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="req">PVC Name</th>
+                                <td><input type="text" placeholder="0~65535"></td>
+                            </tr>
+                            <tr>
+                                <th class="req">Access Mode</th>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                        <div class="dropdown-menu">
+                                          <button class="dropdown-item" type="button">opt1</button>
+                                          <button class="dropdown-item" type="button">opt2</button>
+                                          <button class="dropdown-item" type="button">opt3</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">Disk (GB)</th>
+                                <td>
+                                    <input type="text" placeholder="최소Disk">
+                                    <span style="margin-left: 10px;">GB</span>
+                                    <input type="text" placeholder="최대Disk" style="margin-left:28px;">
+                                    <span style="margin-left: 10px;">GB</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>StorageClass Name</th>
+                                <td>
+                                    <input type="text" placeholder="이름입력">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-tit" style="margin-top:40px;">
+                    Ports 설정
+                    <button class="circle-minus"></button>
+                </div>
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>PVC Name</th>
+                                <td><input type="text" placeholder="0~65535"></td>
+                            </tr>
+                            <tr>
+                                <th class="req">Access Mode</th>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                        <div class="dropdown-menu">
+                                          <button class="dropdown-item" type="button">opt1</button>
+                                          <button class="dropdown-item" type="button">opt2</button>
+                                          <button class="dropdown-item" type="button">opt3</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="req">Disk (GB)</th>
+                                <td>
+                                    <input type="text" placeholder="최소Disk">
+                                    <span style="margin-left: 10px;">GB</span>
+                                    <input type="text" placeholder="최대Disk" style="margin-left:28px;">
+                                    <span style="margin-left: 10px;">GB</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>StorageClass Name</th>
+                                <td>
+                                    <input type="text" placeholder="이름입력">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn-xs-main-line" style="margin-top: 20px;"><i class="ic-add"></i>PVC 추가</button>
+            </div>
+
+            <!-- 스텝 4 -->
+            <div class="tab-pane fade" id="appPackaging04" role="tabpanel" aria-labelledby="appPackaging04-tab">
+                <div class="tableWrap">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>앱 탬플릿</th>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">선택해주세요.</button>
+                                        <div class="dropdown-menu">
+                                          <button class="dropdown-item" type="button">opt1</button>
+                                          <button class="dropdown-item" type="button">opt2</button>
+                                          <button class="dropdown-item" type="button">opt3</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul class="nav nav-tabs tab-round" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="tab-01" data-toggle="tab" data-target="#Yaml" type="button" role="tab" aria-controls="Yaml" aria-selected="true">Yaml</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="tab-02" data-toggle="tab" data-target="#Command" type="button" role="tab" aria-controls="Command" aria-selected="false">Command</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                    <!-- 첫번째탭 -->
+                    <div class="tab-pane fade show active" id="Yaml" role="tabpanel" aria-labelledby="Yaml-tab">
+                        <div class="codeView">
+
+                        </div>
+                    </div>
+        
+                    <!-- 두번째탭 -->
+                    <div class="tab-pane fade" id="Command" role="tabpanel" aria-labelledby="Command-tab">
+                        2
+                    </div>
+                </div>
+            </div>
+
+            <!-- 스텝 5 -->
+            <div class="tab-pane fade" id="appPackaging05" role="tabpanel" aria-labelledby="appPackaging05-tab">
+                스텝3 참조
+            </div>
+
+            <!-- 스텝6 -->
+            <div class="tab-pane fade" id="appPackaging06" role="tabpanel" aria-labelledby="appPackaging06-tab">
+                그리드
+            </div>
+            
+            <!-- 스텝7 -->
+            <!-- 스텝7에 도달하면 btnWrap 제거 -->
+            <div class="tab-pane fade" id="appPackaging07" role="tabpanel" aria-labelledby="appPackaging07-tab">
+                <div class="apply-step-success" style="margin-top: 100px;">
+                    <img src="./img/bg_complete.svg" alt="apply-step-success">
+                    <div class="mesg"><b> 탬플릿 생성이 완료</b>되었습니다.</div>
+                    <button class="btn-xl-main">확인</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="btnWrap">
+            <button class="btn-xl-df">이전</button>
+            <!-- <button class="btn-xl-sub">임시저장</button> -->
+            <button class="btn-xl-main">다음</button>
+        </div>
+
+
+    </div>
+</body>
+</html>

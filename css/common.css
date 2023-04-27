@@ -394,7 +394,31 @@ body {
   content: "";
   width: 12px;
   height: 12px;
-  background: url(../img/ic_gridControl_new.svg) center/cover no-repeat;
+  background: center/cover no-repeat;
+}
+.gridWrap .top .control .new::before {
+  background-image: url(../img/ic_gridControl_new.svg);
+}
+.gridWrap .top .control .ok {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background: #4EBBF7;
+  border-radius: 4px;
+  padding: 0 16px;
+  color: #fff;
+  border: 0;
+  gap: 4px;
+  font-weight: 500;
+}
+.gridWrap .top .control .ok::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: center/cover no-repeat;
+}
+.gridWrap .top .control .ok::before {
+  background-image: url(../img/ic_gridControl_ok.svg);
 }
 .gridWrap .top .control .combobox {
   display: flex;
@@ -887,9 +911,14 @@ body {
   padding-left: 24px;
   background: url(../img/ic_24_linking.svg) left center no-repeat;
   cursor: pointer;
+  border-radius: 6px;
 }
 .treeView .item + .item {
   margin-top: 4px;
+}
+.treeView .item.selected, .treeView .item:hover {
+  color: #0064C0;
+  background-color: #EFF9FF;
 }
 .treeView .addTree {
   height: 32px;
@@ -931,9 +960,14 @@ body {
   padding-left: 24px;
   background: url(../img/ic_24_linking.svg) left center no-repeat;
   cursor: pointer;
+  border-radius: 6px;
 }
 .grid .item + .item {
   margin-top: 4px;
+}
+.grid .item.selected, .grid .item:hover {
+  color: #0064C0;
+  background-color: #EFF9FF;
 }
 .grid .addTree {
   height: 32px;
@@ -991,7 +1025,31 @@ body {
   content: "";
   width: 12px;
   height: 12px;
-  background: url(../img/ic_gridControl_new.svg) center/cover no-repeat;
+  background: center/cover no-repeat;
+}
+.divisionWrap .control .new::before {
+  background-image: url(../img/ic_gridControl_new.svg);
+}
+.divisionWrap .control .ok {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background: #4EBBF7;
+  border-radius: 4px;
+  padding: 0 16px;
+  color: #fff;
+  border: 0;
+  gap: 4px;
+  font-weight: 500;
+}
+.divisionWrap .control .ok::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: center/cover no-repeat;
+}
+.divisionWrap .control .ok::before {
+  background-image: url(../img/ic_gridControl_ok.svg);
 }
 .divisionWrap .control .combobox {
   display: flex;

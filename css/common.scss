@@ -356,7 +356,31 @@ $lnbWidth : 286px;
                 content: '';
                 width: 12px;
                 height: 12px;
-                background: url(../img/ic_gridControl_new.svg) center/cover no-repeat;
+                background: center/cover no-repeat;
+            }
+            &::before {
+                background-image: url(../img/ic_gridControl_new.svg);
+            }
+        }
+        .ok {
+            display: flex;
+            align-items: center;
+            height: 28px;
+            background: #4EBBF7;
+            border-radius: 4px;
+            padding: 0 16px;
+            color: #fff;
+            border: 0;
+            gap: 4px;
+            font-weight: 500;
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                background: center/cover no-repeat;
+            }
+            &::before {
+                background-image: url(../img/ic_gridControl_ok.svg);
             }
         }
         .combobox {
@@ -842,8 +866,14 @@ $lnbWidth : 286px;
         padding-left: 24px;
         background: url(../img/ic_24_linking.svg) left center no-repeat;
         cursor: pointer;
+        border-radius: 6px;
         & + .item {
             margin-top: 4px;
+        }
+        &.selected,
+        &:hover {
+            color: #0064C0;
+            background-color: #EFF9FF;
         }
     }
 
