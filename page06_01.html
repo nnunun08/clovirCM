@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div class="gnb">
+        <a href="#">
+            <!-- 루트 기준 경로. 개발 환경에 따라 경로 설정해주세요 -->
+            <img src="../img/logo_cm.svg" alt="logo">
+        </a>
+        <ul class="menu">
+            <li><a href="#">앱 관리</a></li>
+            <li><a href="#">프로젝트 관리</a></li>
+            <li><a href="#">결재함</a></li>
+            <li><a href="#">사용자 관리</a></li>
+            <li><a href="#">서비스 설정</a></li>
+            <li class="ac"><a href="#">시스템</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">대시보드</a></li>
+        </ul>
+        <div class="profile">
+            <div class="text">
+                <span class="team">[팀명]</span>
+                <span class="name">관리자</span>
+                <span class="after">님</span>
+            </div>
+            <!-- 루트 기준 경로. 개발 환경에 따라 경로 설정해주세요 -->
+            <img class="profileImg" src="../img/ic_profile.svg" alt="profile">
+        </div>
+    </div>
+
+    <div class="lnb">
+        <div class="tit page-system">시스템</div>
+        <ul class="menu">
+            <li class="subPage6-01 ac"><a href="#">시스템 작업 현황</a></li>
+            <li class="subPage6-02"><a href="#">감사(Audit)</a></li>
+            <li class="subPage6-03"><a href="#">시스템 알림</a></li> 
+        </ul>
+    </div>
+
+    <div class="cmContent">
+        <div class="h1">시스템 작업 현황</div>
+
+        <section class="mainSearch">
+            <div class="tableWrap">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>value</th>
+                            <td>
+                                <input type="text" placeholder="placeholder">
+                            </td>
+                            <th>value</th>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                        ALL
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button">value1</button>
+                                        <button class="dropdown-item" type="button">value2</button>
+                                        <button class="dropdown-item" type="button">value3</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>value</th>
+                            <td>
+                                <div class="dropdown" style="width: 175px;">
+                                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">
+                                      전체
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <button class="dropdown-item" type="button">관리자</button>
+                                      <button class="dropdown-item" type="button">프로젝트 관리자</button>
+                                      <button class="dropdown-item" type="button">사용자</button>
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="placeholder" style="width:184px;">
+                            </td>
+
+                            <th>발생기간</th>
+                            <td>
+                                <div class="searchInputWrap" style="width:160px">
+                                    <input type="text" class="searchInput" placeholder="조회전일">
+                                    <button class="searchInputBtn">검색</button>
+                                </div>
+                                <span class="fromToDash">~</span>
+                                <div class="searchInputWrap" style="width:160px">
+                                    <input type="text" class="searchInput" placeholder="조회전일">
+                                    <button class="searchInputBtn">검색</button>
+                                </div>
+                                <div class="flexWrap">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="searchBtn">조회</button>
+        </section>
+
+        <section class="gridWrap">
+            <div class="top">
+                <div class="result">
+                    <span>검색결과</span>
+                    <span class="value">24</span>
+                </div>
+                <div class="control">
+                    <button class="excel">excel</button>
+                    <!-- <button class="new">신규신청</button>
+                    <select class="combobox" name="" id="">
+                        <option value="Action">Action</option>
+                        <option value="Action">Action</option>
+                        <option value="Action">Action</option>
+                    </select>
+                    <button class="df">삭제</button>
+                    <button class="df">복원</button>
+                    <button class="cont-list">LIST</button>
+                    <button class="cont-grid">CARD</button> -->
+                    <select class="view" name="" id="">
+                        <option value="30개 보기">30개 보기</option>
+                        <option value="30개 보기">50개 보기</option>
+                        <option value="30개 보기">100개 보기</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid">
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th>
+                                <label class="checkbox"><input type="checkbox"></label>
+                            </th>
+                            <th>value</th>
+                            <th>value</th>
+                            <th>value</th>
+                            <th>value</th>
+                            <th>value</th>
+                            <th>value</th>
+                            <th>작업상태</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td>
+                                <label class="checkbox"><input type="checkbox"></label>
+                            </td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>
+                                <!-- evoke0501 :  상태 표시용 이라면 span / 클릭 기능이 필요하다면 span => button 으로 변경해도 됩니다. -->
+                                <span class="status green">실행중</span>
+                                <!-- 그린 -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox"><input type="checkbox"></label>
+                            </td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>
+                                <!-- evoke0501 :  상태 표시용 이라면 span / 클릭 기능이 필요하다면 span => button 으로 변경해도 됩니다. -->
+                                <span class="status blue">실행완료</span> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="checkbox"><input type="checkbox"></label>
+                            </td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>value</td>
+                            <td>
+                                <!-- evoke0501 :  상태 표시용 이라면 span / 클릭 기능이 필요하다면 span => button 으로 변경해도 됩니다. -->
+                                <span class="status red">배포실패</span>
+                                <!-- 레드 -->
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link arr prev-most" href="#" aria-label="Previous"></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link arr prev" href="#" aria-label="Previous"></a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link arr next" href="#" aria-label="Next"></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link arr next-most" href="#" aria-label="Next"></a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+</body>
+</html>

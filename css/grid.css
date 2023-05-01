@@ -65,4 +65,16 @@
 
 .block-40 {
   margin-top: 40px;
+}
+
+.detailLink {
+  display: block;
+  width: 100%;
+  color: inherit;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.detailLink:hover {
+  color: #0098ED;
 }/*# sourceMappingURL=grid.css.map */

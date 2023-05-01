@@ -5,6 +5,7 @@
 @import url(./table.css);
 @import url(./grid.css);
 @import url(./btn.css);
+@import url(./dashboard.css);
 
 html {
     font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
@@ -17,6 +18,12 @@ body {
     line-height: 1.5;
     font-size: 14px;
     min-width: 1680px;
+}
+a {
+    color: inherit;
+    &:hover {
+        color: #0098ED;
+    }
 }
 
 $gnbHeight : 126px;
@@ -383,16 +390,20 @@ $lnbWidth : 286px;
                 background-image: url(../img/ic_gridControl_ok.svg);
             }
         }
+        .line,
         .combobox {
             display: flex;
             align-items: center;
             height: 28px;
             border-radius: 4px;
             padding: 0 16px;
-            padding-right: 32px;
             color: #0098ED;
-            background: #F8FCFF url(../img/ic_gridControl_combobox.svg) right 16px center/12px no-repeat;
             border: 1px solid #C7E9FC;
+            background-color: #F8FCFF;
+        }
+        .combobox {
+            padding-right: 32px;
+            background: #F8FCFF url(../img/ic_gridControl_combobox.svg) right 16px center/12px no-repeat;
         }
         .df {
             display: flex;
@@ -410,6 +421,15 @@ $lnbWidth : 286px;
             padding-right: 16px;
             background: url(../img/ic_gridControl_view.svg) right center/12px no-repeat;
         }
+        .excel {
+            background: url(../img/ic_excel.svg) center no-repeat;
+            border: 1px solid #E9E9E9;
+            border-radius: 4px;
+            height: 28px;
+            width: 42px;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
         
         .cont-list {
             @include square;
@@ -419,6 +439,8 @@ $lnbWidth : 286px;
             @include square;
             background-image: url(../img/ic_grid.svg);
         }
+
+        
     }
 }
 
@@ -493,12 +515,15 @@ $lnbWidth : 286px;
     color: #fff;
     font-size: 12px;
     border: 0;
+    &.green,
     &.stay {
         background-color: #41B97F;
     }
+    &.blue,
     &.run {
         background-color: #0098ED;
     }
+    &.red,
     &.fail {    
         background-color: #E95072;
     }

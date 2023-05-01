@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClovirCM</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+</head>
+<body>
+    <div class="gnb">
+        <a href="#">
+            <!-- 루트 기준 경로. 개발 환경에 따라 경로 설정해주세요 -->
+            <img src="../img/logo_cm.svg" alt="logo">
+        </a>
+        <ul class="menu">
+            <li><a href="#">앱 관리</a></li>
+            <li><a href="#">프로젝트 관리</a></li>
+            <li><a href="#">결재함</a></li>
+            <li><a href="#">사용자 관리</a></li>
+            <li><a href="#">서비스 설정</a></li>
+            <li><a href="#">시스템</a></li>
+            <li><a href="#">게시판</a></li>
+            <li class="ac"><a href="#">대시보드</a></li>
+        </ul>
+        <div class="profile">
+            <div class="text">
+                <span class="team">[팀명]</span>
+                <span class="name">관리자</span>
+                <span class="after">님</span>
+            </div>
+            <!-- 루트 기준 경로. 개발 환경에 따라 경로 설정해주세요 -->
+            <img class="profileImg" src="../img/ic_profile.svg" alt="profile">
+        </div>
+    </div>
+
+
+    <!-- 대시보드는 LNB가 없어서, cmContent에 .dashboard 추가 -->
+    <div class="cmContent dashboard">
+        <div class="pageTit">
+            대시보드
+            <button class="btn-xs-df-line">설정</button>
+        </div>
+
+        <div class="dashCardWrap">
+            <!-- 사용현황 -->
+            <div class="card useSummary">
+                <div class="name">사용 현황</div>
+                <div class="date">2023.02.27일 기준</div>
+                <button class="scale">scale</button>
+                <div class="itemWrap">
+                    <!-- cir : .tit요소에 .cir클래스가 들어가면 쩜 표시가 디스플레이됨 -->
+                    <div class="item"><div class="tit cir">프로젝트</div><div class="value">8</div></div>
+                    <div class="item"><div class="tit cir">앱</div><div class="value">222</div></div>
+                    <div class="item"><div class="tit cir">앱 배포</div><div class="value">33</div></div>
+                    <div class="item"><div class="tit cir">사용자수</div><div class="value">11</div></div>
+                </div>
+                <button class="btn-xs-df-line viewDaily">일별보기</button>
+            </div>
+
+            <!-- 일/주/월 평균 접속자수 -->
+            <div class="card">
+                <div class="name">일/주/월 평균 접속자수</div>
+                <div class="date">2023.02.27일 기준</div>
+                <button class="scale">scale</button>
+                <div class="itemWrap">
+                    <!-- cir : .tit요소에 .cir클래스가 들어가면 쩜 표시가 디스플레이됨 -->
+                    <div class="item"><div class="tit">DAU</div><div class="value">58</div></div>
+                    <div class="item"><div class="tit">WAU</div><div class="value">222</div></div>
+                    <div class="item"><div class="tit">MAU</div><div class="value">1,234</div></div>
+                </div>
+                <button class="btn-xs-df-line viewDaily">일별보기</button>
+            </div>
+
+            <!-- 결재요청 -->
+            <div class="card approval">
+                <div class="name">결재요청</div>
+                <div class="date">2023.02.27일 기준</div>
+                <button class="scale">scale</button>
+                <div class="itemWrap">
+                    <!-- cir : .tit요소에 .cir클래스가 들어가면 쩜 표시가 디스플레이됨 -->
+                    <div class="item"><div class="tit">승인대기</div><div class="value">38</div></div>
+                    <div class="item"><div class="tit cir">프로젝트 요청</div>
+                        <div class="value">16</div>
+                        <span class="won">
+                            2,780,000<em>원</em>
+                        </span>
+                    </div>
+                    <div class="item"><div class="tit cir">앱 생성 요청</div><div class="value">20</div></div>
+                </div>
+                <button class="btn-xs-df-line viewDaily">일별보기</button>
+            </div>
+
+            <!-- 자원 사용 TOP10 프로젝트 -->
+            <div class="card top10">
+                <div class="name">자원 사용 TOP10 프로젝트</div>
+                <div class="date">2023.02.27일 기준</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">전체</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">value1</button>
+                        <button class="dropdown-item" type="button">value2</button>
+                        <button class="dropdown-item" type="button">value3</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+                
+
+                <ul class="nav nav-tabs tab-round" id="myTab" role="tablist" style="margin-top: 0;">
+                    <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-01" data-toggle="tab" data-target="#tab01" type="button" role="tab" aria-controls="tab01" aria-selected="true">CPU</button></li>
+                    <li class="nav-item" role="presentation"><button class="nav-link" id="tab-02" data-toggle="tab" data-target="#tab02" type="button" role="tab" aria-controls="tab02" aria-selected="false">CPU</button></li>
+                    <li class="nav-item" role="presentation"><button class="nav-link" id="tab-03" data-toggle="tab" data-target="#tab03" type="button" role="tab" aria-controls="tab03" aria-selected="false">CPU</button></li>
+                </ul>
+
+                <div class="tab-content tab-round-content" id="myTabContent">
+                    <!-- 첫번째탭 -->
+
+                    <div class="tab-pane fade show active" id="tab01" role="tabpanel" aria-labelledby="tab01-tab">
+                        <ul class="top10List">
+                            <li class="light"><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li class="light"><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li class="light"><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                            <li><span class="proj">모바일서비스 고도화</span><span class="percent">75%</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- 두번째탭 -->
+                    <div class="tab-pane fade" id="tab02" role="tabpanel" aria-labelledby="tab02-tab">
+                        ...
+                    </div>
+
+                    <!-- 세번째탭 -->
+                    <div class="tab-pane fade" id="tab03" role="tabpanel" aria-labelledby="tab03-tab">
+                        ...
+                    </div>
+                </div>
+            </div>
+
+            <!-- 실시간 사용량 -->
+            <div class="card usage">
+                <div class="name">실시간 사용량</div>
+                <div class="date">2023.02.27일 기준</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">전체</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">value1</button>
+                        <button class="dropdown-item" type="button">value2</button>
+                        <button class="dropdown-item" type="button">value3</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+                
+                <div class="barWrap">
+                    <div class="bar bar1">
+                        <div class="label">
+                            <div class="tit">CPU(Core)</div>
+                            <div class="value1">할당<span>16Core</span></div>
+                            <div class="divider"></div>
+                            <div class="value2">전체<span>640</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <span class="value">25<em>%</em></span>
+                        </div>
+                    </div>
+                    <div class="bar bar2">
+                        <div class="label">
+                            <div class="tit">Memory</div>
+                            <div class="value1">할당<span>2GB</span></div>
+                            <div class="divider"></div>
+                            <div class="value2">전체<span>1,290</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                            <span class="value">72<em>%</em></span>
+                        </div>
+                    </div>
+                    <div class="bar bar3">
+                        <div class="label">
+                            <div class="tit">Disk</div>
+                            <div class="value1">할당<span>5,120GB</span></div>
+                            <div class="divider"></div>
+                            <div class="value2">전체<span>10,290</span></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <span class="value">80<em>%</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 배포현항 -->
+            <div class="card">
+                <div class="name">배포현항</div>
+                <div class="date">2023.02.27일 기준</div>
+                <button class="scale">scale</button>
+                <div class="itemWrap">
+                    <!-- cir : .tit요소에 .cir클래스가 들어가면 쩜 표시가 디스플레이됨 -->
+                    <div class="item"><div class="tit cir">일</div><div class="value">28</div></div>
+                    <div class="item"><div class="tit cir">주간</div><div class="value">54</div></div>
+                    <div class="item"><div class="tit cir">월간</div><div class="value">128</div></div>
+                </div>
+                <button class="btn-xs-df-line viewDaily">일별보기</button>
+            </div>
+
+            <!-- 프로젝트 현황 -->
+            <div class="card projSummary">
+                <div class="name">프로젝트 현황</div>
+                <div class="date">2023.02.27일 기준</div>
+                <button class="scale">scale</button>
+                <div class="itemWrap">
+                    <!-- cir : .tit요소에 .cir클래스가 들어가면 쩜 표시가 디스플레이됨 -->
+                    <div class="item"><div class="tit cir">전체 프로젝트</div><div class="value">28</div></div>
+                    <div class="item"><div class="tit cir">만료예정</div><div class="value">18</div></div>
+                    <div class="item"><div class="tit cir">삭제예정</div><div class="value">12</div></div>
+                </div>
+
+                <div class="podWrap">
+                    <div class="pod">
+                        <span>POD수</span>
+                        <span class="divider"></span>
+                        <span class="value">222</span>
+                    </div>
+                    <div class="pod err">
+                        <span>Error POD수</span>
+                        <span class="divider"></span>
+                        <span class="value">222</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 월간 누적 프로젝트 vs Build App CI/CD App 생성현황 -->
+            <div class="card bigChart">
+                <div class="name">월간 누적 프로젝트 vs Build App CI/CD App 생성현황</div>
+                <div class="date">2023.02.27일 기준</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">2022년 2월</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">2022년 2월</button>
+                        <button class="dropdown-item" type="button">2022년 1월</button>
+                        <button class="dropdown-item" type="button">2021년 12월</button>
+                        <button class="dropdown-item" type="button">2021년 11월</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+                
+                <div class="chartWrap">
+                    <canvas id="bigChart"></canvas>
+                </div>
+                
+                <script>
+
+                    Chart.defaults.backgroundColor = '#fff';
+                    Chart.defaults.borderColor = '#ddd';
+                    Chart.defaults.color = '#4A4A4A';
+
+                    const ctx = document.getElementById('bigChart');
+                    
+                    new Chart(ctx, {
+                        type: 'bar',
+
+                        data: {
+                            datasets: [{
+                                type: 'bar',
+                                label: '프로젝트',
+                                data: [30, 30, 30, 30],
+                                backgroundColor: '#41B97F',
+                                barThickness: 20,
+                                borderWidth: 2,
+                                borderColor: 'transparent'
+                            }, {
+                                type: 'bar',
+                                label: 'Build APP',
+                                data: [50, 50, 50, 50],
+                                backgroundColor: '#4EBBF7',
+                                barThickness: 20,
+                                borderWidth: 2,
+                                borderColor: 'transparent'
+                            }, {
+                                type: 'bar',
+                                label: 'CI/CD APP',
+                                data: [40, 40, 40, 40],
+                                backgroundColor: '#0064C0',
+                                barThickness: 20,
+                                borderWidth: 2,
+                                borderColor: 'transparent'
+                            }],
+                            labels: ['YY-MM', 'YY-MM','YY-MM','YY-MM',]
+                        },
+
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio:false,
+                            // aspectRatio:2,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            
+                            plugins: {
+                                legend : {
+                                    // fontColor: '#fff',
+                                    align : 'end',
+                                    // position : 'bottom',
+                                    // rtl : true,
+                                    labels : {
+                                        // fontColor: '#333',
+                                        boxWidth : 8,
+                                        boxHeight : 8,
+                                    }
+                                },
+                                tooltip : {
+                                    enabled: false,
+                                    // external: 'average'
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    left: 24,
+                                    right: 0,
+                                    top: 0,
+                                    bottom: 0
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+            <!-- 앱 현황 -->
+            <div class="card appSummary">
+                <div class="name">앱 현황</div>
+                <div class="date">최근 일주일</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">노드선택</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">value1</button>
+                        <button class="dropdown-item" type="button">value2</button>
+                        <button class="dropdown-item" type="button">value3</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+                <div class="itemWrap">
+                    <!-- cir : .tit요소에 .cir클래스가 들어가면 쩜 표시가 디스플레이됨 -->
+                    <div class="item"><div class="tit cir">Build 앱</div><div class="value">28</div></div>
+                    <div class="item"><div class="tit cir">CI/CD 앱</div><div class="value">28</div></div>
+                    <div class="item"><div class="tit cir">생성 POD</div><div class="value">4</div></div>
+                    <div class="item"><div class="tit cir">삭제PDD</div><div class="value">12</div></div>
+                </div>
+            </div>
+
+            <!-- CPU 주간 사용추이 (노드별) -->
+            <div class="card appSummary">
+                <div class="name">CPU 주간 사용추이 (노드별)</div>
+                <div class="date">2023.02.27일 기준</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">2022년 2월</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">2022년 2월</button>
+                        <button class="dropdown-item" type="button">2022년 1월</button>
+                        <button class="dropdown-item" type="button">2021년 12월</button>
+                        <button class="dropdown-item" type="button">2021년 11월</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+
+                <div class="chartWrap">
+                    <canvas id="chartCPU"></canvas>
+                </div>
+                
+                <script>
+                    const ctx2 = document.getElementById('chartCPU');
+                    new Chart(ctx2, {
+                        type: 'bar',
+                        data: {
+                            datasets: [{
+                                label: '여유',
+                                data: [10, 20, 30, 40],
+                                order: 2,
+                                backgroundColor: '#0098ED',
+                                barThickness: 28,
+                            }, {
+                                label: '사용',
+                                data: [10, 20, 30, 40],
+                                type: 'line',
+                                order: 1,
+                                backgroundColor: '#C0002B',
+                                borderColor: '#C0002B',
+                                borderWidth: '2',
+                                pointRadius:4,
+                            }],
+                            labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio:false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            
+                            plugins: {
+                                legend : {
+                                    align : 'end',
+                                    labels : {
+                                        boxWidth : 8,
+                                        boxHeight : 8,
+                                    }
+                                },
+                                tooltip : {
+                                    enabled: false,
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    left: 4,
+                                    right: 4,
+                                    top: 0,
+                                    bottom: 0
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+            <!-- Memory 주간 사용추이 (노드별) -->
+            <div class="card memorySummary">
+                <div class="name">Memory 주간 사용추이 (노드별)</div>
+                <div class="date">2023.02.27일 기준</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">2022년 2월</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">2022년 2월</button>
+                        <button class="dropdown-item" type="button">2022년 1월</button>
+                        <button class="dropdown-item" type="button">2021년 12월</button>
+                        <button class="dropdown-item" type="button">2021년 11월</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+
+                <div class="chartWrap">
+                    <canvas id="chartMemory"></canvas>
+                </div>
+                
+                <script>
+                    const ctx3 = document.getElementById('chartMemory');
+                    new Chart(ctx3, {
+                        type: 'bar',
+                        data: {
+                            datasets: [{
+                                label: '여유',
+                                data: [10, 20, 30, 40],
+                                order: 2,
+                                backgroundColor: '#359D6B',
+                                barThickness: 28,
+                            }, {
+                                label: '사용',
+                                data: [10, 20, 30, 40],
+                                type: 'line',
+                                order: 1,
+                                backgroundColor: '#C0002B',
+                                borderColor: '#C0002B',
+                                borderWidth: '2',
+                                pointRadius:4,
+                            }],
+                            labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio:false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            
+                            plugins: {
+                                legend : {
+                                    align : 'end',
+                                    labels : {
+                                        boxWidth : 8,
+                                        boxHeight : 8,
+                                    }
+                                },
+                                tooltip : {
+                                    enabled: false,
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    left: 4,
+                                    right: 4,
+                                    top: 0,
+                                    bottom: 0
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+            <!-- Disk 주간 사용추이 (노드별) -->
+            <div class="card diskSummary">
+                <div class="name">Disk 주간 사용추이 (노드별)</div>
+                <div class="date">2023.02.27일 기준</div>
+                <div class="dropdown filter">
+                    <button class="select" type="button" data-toggle="dropdown" aria-expanded="false">2022년 2월</button>
+                    <div class="dropdown-menu">
+                        <button class="dropdown-item" type="button">2022년 2월</button>
+                        <button class="dropdown-item" type="button">2022년 1월</button>
+                        <button class="dropdown-item" type="button">2021년 12월</button>
+                        <button class="dropdown-item" type="button">2021년 11월</button>
+                    </div>
+                </div>
+                <button class="scale">scale</button>
+
+                <div class="chartWrap">
+                    <canvas id="chartDisk"></canvas>
+                </div>
+                
+                <script>
+                    const ctx4 = document.getElementById('chartDisk');
+                    new Chart(ctx4, {
+                        type: 'bar',
+                        data: {
+                            datasets: [{
+                                label: '여유',
+                                data: [10, 20, 30, 40],
+                                order: 2,
+                                backgroundColor: '#004CA0',
+                                barThickness: 28,
+                            }, {
+                                label: '사용',
+                                data: [10, 20, 30, 40],
+                                type: 'line',
+                                order: 1,
+                                backgroundColor: '#C0002B',
+                                borderColor: '#C0002B',
+                                borderWidth: '2',
+                                pointRadius:4,
+                            }],
+                            labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio:false,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            
+                            plugins: {
+                                legend : {
+                                    align : 'end',
+                                    labels : {
+                                        boxWidth : 8,
+                                        boxHeight : 8,
+                                    }
+                                },
+                                tooltip : {
+                                    enabled: false,
+                                }
+                            },
+                            layout: {
+                                padding: {
+                                    left: 4,
+                                    right: 4,
+                                    top: 0,
+                                    bottom: 0
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>

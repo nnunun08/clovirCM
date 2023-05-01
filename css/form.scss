@@ -54,6 +54,7 @@ input.searchInput {
 .searchInputWrap {
     position: relative;
     width: 280px;
+    display: inline-block;
     .searchInputBtn {
         position: absolute;
         right: 8px;
@@ -67,6 +68,10 @@ input.searchInput {
         text-indent: -9999px;
         overflow: hidden;
     }
+}
+.fromToDash {
+    margin: 0 6px;
+    color: #000;
 }
 
 input.calendarInput {
