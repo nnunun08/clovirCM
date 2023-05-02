@@ -6,6 +6,7 @@
 @import url(./grid.css);
 @import url(./btn.css);
 @import url(./dashboard.css);
+@import url(./fullCalendar.css);
 html {
   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   line-height: 1.5;
@@ -923,6 +924,9 @@ a:hover {
   background: url(../img/ic_24_highlink.svg) left center no-repeat;
   cursor: pointer;
 }
+.treeView .groupTit:has(+ ul > .selected) {
+  color: #0064C0;
+}
 .treeView ul:has(.item) {
   display: none;
 }
@@ -971,6 +975,9 @@ a:hover {
   padding-left: 32px;
   background: url(../img/ic_24_highlink.svg) left center no-repeat;
   cursor: pointer;
+}
+.grid .groupTit:has(+ ul > .selected) {
+  color: #0064C0;
 }
 .grid ul:has(.item) {
   display: none;

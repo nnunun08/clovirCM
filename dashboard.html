@@ -262,85 +262,7 @@
                 <div class="chartWrap">
                     <canvas id="bigChart"></canvas>
                 </div>
-                
-                <script>
 
-                    Chart.defaults.backgroundColor = '#fff';
-                    Chart.defaults.borderColor = '#ddd';
-                    Chart.defaults.color = '#4A4A4A';
-
-                    const ctx = document.getElementById('bigChart');
-                    
-                    new Chart(ctx, {
-                        type: 'bar',
-
-                        data: {
-                            datasets: [{
-                                type: 'bar',
-                                label: '프로젝트',
-                                data: [30, 30, 30, 30],
-                                backgroundColor: '#41B97F',
-                                barThickness: 20,
-                                borderWidth: 2,
-                                borderColor: 'transparent'
-                            }, {
-                                type: 'bar',
-                                label: 'Build APP',
-                                data: [50, 50, 50, 50],
-                                backgroundColor: '#4EBBF7',
-                                barThickness: 20,
-                                borderWidth: 2,
-                                borderColor: 'transparent'
-                            }, {
-                                type: 'bar',
-                                label: 'CI/CD APP',
-                                data: [40, 40, 40, 40],
-                                backgroundColor: '#0064C0',
-                                barThickness: 20,
-                                borderWidth: 2,
-                                borderColor: 'transparent'
-                            }],
-                            labels: ['YY-MM', 'YY-MM','YY-MM','YY-MM',]
-                        },
-
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio:false,
-                            // aspectRatio:2,
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            },
-                            
-                            plugins: {
-                                legend : {
-                                    // fontColor: '#fff',
-                                    align : 'end',
-                                    // position : 'bottom',
-                                    // rtl : true,
-                                    labels : {
-                                        // fontColor: '#333',
-                                        boxWidth : 8,
-                                        boxHeight : 8,
-                                    }
-                                },
-                                tooltip : {
-                                    enabled: false,
-                                    // external: 'average'
-                                }
-                            },
-                            layout: {
-                                padding: {
-                                    left: 24,
-                                    right: 0,
-                                    top: 0,
-                                    bottom: 0
-                                }
-                            }
-                        }
-                    });
-                </script>
             </div>
 
             <!-- 앱 현황 -->
@@ -366,7 +288,7 @@
             </div>
 
             <!-- CPU 주간 사용추이 (노드별) -->
-            <div class="card appSummary">
+            <div class="card cpuChart">
                 <div class="name">CPU 주간 사용추이 (노드별)</div>
                 <div class="date">2023.02.27일 기준</div>
                 <div class="dropdown filter">
@@ -383,66 +305,10 @@
                 <div class="chartWrap">
                     <canvas id="chartCPU"></canvas>
                 </div>
-                
-                <script>
-                    const ctx2 = document.getElementById('chartCPU');
-                    new Chart(ctx2, {
-                        type: 'bar',
-                        data: {
-                            datasets: [{
-                                label: '여유',
-                                data: [10, 20, 30, 40],
-                                order: 2,
-                                backgroundColor: '#0098ED',
-                                barThickness: 28,
-                            }, {
-                                label: '사용',
-                                data: [10, 20, 30, 40],
-                                type: 'line',
-                                order: 1,
-                                backgroundColor: '#C0002B',
-                                borderColor: '#C0002B',
-                                borderWidth: '2',
-                                pointRadius:4,
-                            }],
-                            labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio:false,
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            },
-                            
-                            plugins: {
-                                legend : {
-                                    align : 'end',
-                                    labels : {
-                                        boxWidth : 8,
-                                        boxHeight : 8,
-                                    }
-                                },
-                                tooltip : {
-                                    enabled: false,
-                                }
-                            },
-                            layout: {
-                                padding: {
-                                    left: 4,
-                                    right: 4,
-                                    top: 0,
-                                    bottom: 0
-                                }
-                            }
-                        }
-                    });
-                </script>
             </div>
 
             <!-- Memory 주간 사용추이 (노드별) -->
-            <div class="card memorySummary">
+            <div class="card memoryChart">
                 <div class="name">Memory 주간 사용추이 (노드별)</div>
                 <div class="date">2023.02.27일 기준</div>
                 <div class="dropdown filter">
@@ -459,66 +325,10 @@
                 <div class="chartWrap">
                     <canvas id="chartMemory"></canvas>
                 </div>
-                
-                <script>
-                    const ctx3 = document.getElementById('chartMemory');
-                    new Chart(ctx3, {
-                        type: 'bar',
-                        data: {
-                            datasets: [{
-                                label: '여유',
-                                data: [10, 20, 30, 40],
-                                order: 2,
-                                backgroundColor: '#359D6B',
-                                barThickness: 28,
-                            }, {
-                                label: '사용',
-                                data: [10, 20, 30, 40],
-                                type: 'line',
-                                order: 1,
-                                backgroundColor: '#C0002B',
-                                borderColor: '#C0002B',
-                                borderWidth: '2',
-                                pointRadius:4,
-                            }],
-                            labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio:false,
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            },
-                            
-                            plugins: {
-                                legend : {
-                                    align : 'end',
-                                    labels : {
-                                        boxWidth : 8,
-                                        boxHeight : 8,
-                                    }
-                                },
-                                tooltip : {
-                                    enabled: false,
-                                }
-                            },
-                            layout: {
-                                padding: {
-                                    left: 4,
-                                    right: 4,
-                                    top: 0,
-                                    bottom: 0
-                                }
-                            }
-                        }
-                    });
-                </script>
             </div>
 
             <!-- Disk 주간 사용추이 (노드별) -->
-            <div class="card diskSummary">
+            <div class="card diskChart">
                 <div class="name">Disk 주간 사용추이 (노드별)</div>
                 <div class="date">2023.02.27일 기준</div>
                 <div class="dropdown filter">
@@ -536,61 +346,6 @@
                     <canvas id="chartDisk"></canvas>
                 </div>
                 
-                <script>
-                    const ctx4 = document.getElementById('chartDisk');
-                    new Chart(ctx4, {
-                        type: 'bar',
-                        data: {
-                            datasets: [{
-                                label: '여유',
-                                data: [10, 20, 30, 40],
-                                order: 2,
-                                backgroundColor: '#004CA0',
-                                barThickness: 28,
-                            }, {
-                                label: '사용',
-                                data: [10, 20, 30, 40],
-                                type: 'line',
-                                order: 1,
-                                backgroundColor: '#C0002B',
-                                borderColor: '#C0002B',
-                                borderWidth: '2',
-                                pointRadius:4,
-                            }],
-                            labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio:false,
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            },
-                            
-                            plugins: {
-                                legend : {
-                                    align : 'end',
-                                    labels : {
-                                        boxWidth : 8,
-                                        boxHeight : 8,
-                                    }
-                                },
-                                tooltip : {
-                                    enabled: false,
-                                }
-                            },
-                            layout: {
-                                padding: {
-                                    left: 4,
-                                    right: 4,
-                                    top: 0,
-                                    bottom: 0
-                                }
-                            }
-                        }
-                    });
-                </script>
             </div>
 
 
@@ -598,5 +353,246 @@
 
     </div>
 
+    <script>
+
+        Chart.defaults.backgroundColor = 'transparent';
+        Chart.defaults.borderColor = 'transparent';
+        Chart.defaults.color = '#4A4A4A';
+
+        const ctx = document.getElementById('bigChart');
+        
+        new Chart(ctx, {
+            type: 'bar',
+
+            data: {
+                datasets: [{
+                    type: 'bar',
+                    label: '프로젝트',
+                    data: [30, 30, 30, 30],
+                    backgroundColor: '#41B97F',
+                    barThickness: 20,
+                    borderWidth: 2,
+                    borderColor: 'transparent'
+                }, {
+                    type: 'bar',
+                    label: 'Build APP',
+                    data: [50, 50, 50, 50],
+                    backgroundColor: '#4EBBF7',
+                    barThickness: 20,
+                    borderWidth: 2,
+                    borderColor: 'transparent'
+                }, {
+                    type: 'bar',
+                    label: 'CI/CD APP',
+                    data: [40, 40, 40, 40],
+                    backgroundColor: '#0064C0',
+                    barThickness: 20,
+                    borderWidth: 2,
+                    borderColor: 'transparent'
+                }],
+                labels: ['YY-MM', 'YY-MM','YY-MM','YY-MM',]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio:false,
+                // aspectRatio:2,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    }
+                },
+                plugins: {
+                    legend : {
+                        // fontColor: '#fff',
+                        align : 'end',
+                        // position : 'bottom',
+                        // rtl : true,
+                        labels : {
+                            // fontColor: '#333',
+                            boxWidth : 8,
+                            boxHeight : 8,
+                        }
+                    },
+                    tooltip : {
+                        enabled: false,
+                        // external: 'average'
+                    },
+                },
+                layout: {
+                    padding: {
+                        left: 24,
+                        right: 0,
+                        top: 0,
+                        bottom: 0
+                    },
+                    
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('chartCPU');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                datasets: [{
+                    label: '여유',
+                    data: [10, 20, 30, 40],
+                    order: 2,
+                    backgroundColor: '#0098ED',
+                    barThickness: 28,
+                }, {
+                    label: '사용',
+                    data: [10, 20, 30, 40],
+                    type: 'line',
+                    order: 1,
+                    backgroundColor: '#C0002B',
+                    borderColor: '#C0002B',
+                    borderWidth: '2',
+                    pointRadius:4,
+                }],
+                labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio:false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                
+                plugins: {
+                    legend : {
+                        align : 'end',
+                        labels : {
+                            boxWidth : 8,
+                            boxHeight : 8,
+                        }
+                    },
+                    tooltip : {
+                        enabled: false,
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 4,
+                        right: 4,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+            }
+        });
+
+
+        const ctx3 = document.getElementById('chartMemory');
+        new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                datasets: [{
+                    label: '여유',
+                    data: [10, 20, 30, 40],
+                    order: 2,
+                    backgroundColor: '#359D6B',
+                    barThickness: 28,
+                }, {
+                    label: '사용',
+                    data: [10, 20, 30, 40],
+                    type: 'line',
+                    order: 1,
+                    backgroundColor: '#C0002B',
+                    borderColor: '#C0002B',
+                    borderWidth: '2',
+                    pointRadius:4,
+                }],
+                labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio:false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                
+                plugins: {
+                    legend : {
+                        align : 'end',
+                        labels : {
+                            boxWidth : 8,
+                            boxHeight : 8,
+                        }
+                    },
+                    tooltip : {
+                        enabled: false,
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 4,
+                        right: 4,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+            }
+        });
+
+        const ctx4 = document.getElementById('chartDisk');
+        new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                datasets: [{
+                    label: '여유',
+                    data: [10, 20, 30, 40],
+                    order: 2,
+                    backgroundColor: '#004CA0',
+                    barThickness: 28,
+                }, {
+                    label: '사용',
+                    data: [10, 20, 30, 40],
+                    type: 'line',
+                    order: 1,
+                    backgroundColor: '#C0002B',
+                    borderColor: '#C0002B',
+                    borderWidth: '2',
+                    pointRadius:4,
+                }],
+                labels: ['MM-DD', 'MM-DD', 'MM-DD', 'MM-DD']
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio:false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                
+                plugins: {
+                    legend : {
+                        align : 'end',
+                        labels : {
+                            boxWidth : 8,
+                            boxHeight : 8,
+                        }
+                    },
+                    tooltip : {
+                        enabled: false,
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 4,
+                        right: 4,
+                        top: 0,
+                        bottom: 0
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

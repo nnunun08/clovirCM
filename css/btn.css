@@ -443,4 +443,11 @@ button .ic-add {
   width: 20px;
   height: 20px;
   background: url(../img/ic_20_cirlce_minus.svg) center no-repeat;
+}
+
+.download-cvs i {
+  border: 0;
+  width: 12px;
+  height: 12px;
+  background: url(../img/ic_12_download.svg) center no-repeat;
 }/*# sourceMappingURL=btn.css.map */

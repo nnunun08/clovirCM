@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="../css/common.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    
     <style>
         div:has([data-toggle="modal"]) {
             margin: 40px;
         }
     </style>
+    
 </head>
 <body>
     
@@ -59,6 +61,17 @@
             시스템 - 시스템 알림
         </button>
     </div>
+
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-11">
+            캘린더 - 사용 현황
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-12">
+            캘린더 - 일별 접속자 정보
+        </button>
+    </div>
+
+
     <!-- Modal -->
 
     <!-- 
@@ -953,6 +966,134 @@
             <div class="modal-footer">
                 <button type="button" class="btn-m-df" data-dismiss="modal">취소</button>
                 <button type="button" class="btn-m-main">저장</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-11" tabindex="-1" aria-labelledby="modal-11Label" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" style="max-width:1120px;">
+        <div class="modal-content fullcalendar">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-11Label">사용 현황</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="calendarTop">
+                    <button class="cal-left"></button>
+                    <span>2023년 3월</span>
+                    <button class="cal-right"></button>
+                    <button class="btn-xs-df-line download-cvs"><i></i>CVS</button>
+                </div>
+
+                <div class="grid">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th colspan="2">프로젝트 생성</th>
+                                <th colspan="2">앱생성</th>
+                                <th colspan="2">앱배포</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>생성건수</td>
+                                <td>생성건수</td>
+                                <td>앱생성</td>
+                                <td>삭제/만료</td>
+                                <td>배포 건수</td>
+                                <td>배포 에러</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Fullcalendar -->
+                <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js'></script>
+                <script>
+
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var calendarEl = document.getElementById('calendar');
+                        var calendar = new FullCalendar.Calendar(calendarEl, {
+                            initialView: 'dayGridMonth',
+                            headerToolbar: false,
+                        });
+                        calendar.render();
+                    });
+                </script>
+
+                <div id='calendar'></div>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-12" tabindex="-1" aria-labelledby="modal-12Label" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" style="max-width:1120px;">
+        <div class="modal-content fullcalendar">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-11Label">일별 접속자 정보</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="calendarTop">
+                    <button class="cal-left"></button>
+                    <span>2023년 3월</span>
+                    <button class="cal-right"></button>
+                    <button class="btn-xs-df-line download-cvs"><i></i>CVS</button>
+                </div>
+
+                <div class="grid">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th>DAU ( Daily Active User)</th>
+                                <th>WAU ( Weekly Active User)</th>
+                                <th>MAU ( Monthly Active User)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Fullcalendar -->
+                <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js'></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var calendarEl = document.getElementById('calendar02');
+                        var calendar = new FullCalendar.Calendar(calendarEl, {
+                            initialView: 'dayGridMonth',
+                            headerToolbar: false,
+                        });
+                        calendar.render();
+                    });
+                </script>
+
+                <div id='calendar02'></div>
+
+
             </div>
         </div>
         </div>
