@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClovirCM</title>
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="../css/common.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 
     <!-- 퍼블리싱을 위한 include js -->
     <script src="./js/include.js"></script>
 </head>
-<body class="menu-layout-3 modal-open">
+<body>
 
 
-  <div id='calendar'></div>
+  <div class="fullcalendar">
+    <div id='calendar'></div>
+  </div>
 
         
   <!-- Fullcalendar -->
@@ -26,7 +28,8 @@
       document.addEventListener('DOMContentLoaded', function() {
           var calendarEl = document.getElementById('calendar');
           var calendar = new FullCalendar.Calendar(calendarEl, {
-              initialView: 'dayGridMonth'
+              initialView: 'dayGridMonth',
+              headerToolbar: false,
           });
           calendar.render();
       });
