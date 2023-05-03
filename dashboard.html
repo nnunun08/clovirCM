@@ -396,10 +396,16 @@
             options: {
                 responsive: true,
                 maintainAspectRatio:false,
-                // aspectRatio:2,
                 scales: {
                     y: {
-                        beginAtZero: true,
+                        border: {
+                            color: '#dddddd',
+                        }
+                    },
+                    x: {
+                        border: {
+                            color: '#dddddd',
+                        }
                     }
                 },
                 plugins: {
@@ -409,9 +415,10 @@
                         // position : 'bottom',
                         // rtl : true,
                         labels : {
-                            // fontColor: '#333',
                             boxWidth : 8,
                             boxHeight : 8,
+                            useBorderRadius	:true,
+                            borderRadius: 4,
                         }
                     },
                     tooltip : {
@@ -436,13 +443,12 @@
             type: 'bar',
             data: {
                 datasets: [{
-                    label: '여유',
+                    // label: '사용',
                     data: [10, 20, 30, 40],
-                    order: 2,
+                    order: 3,
                     backgroundColor: '#0098ED',
                     barThickness: 28,
                 }, {
-                    label: '사용',
                     data: [10, 20, 30, 40],
                     type: 'line',
                     order: 1,
@@ -458,17 +464,27 @@
                 maintainAspectRatio:false,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        max: 100,
+                        border: {
+                            color: '#dddddd',
+                        }
+                    },
+                    x: {
+                        border: {
+                            color: '#dddddd',
+                        }
                     }
                 },
-                
                 plugins: {
                     legend : {
-                        align : 'end',
-                        labels : {
-                            boxWidth : 8,
-                            boxHeight : 8,
-                        }
+                        display: false,
+                        // align : 'end',
+                        // labels : {
+                        //     boxWidth : 8,
+                        //     boxHeight : 8,
+                        //     useBorderRadius	:true,
+                        //     borderRadius: 4,
+                        // }
                     },
                     tooltip : {
                         enabled: false,
@@ -513,17 +529,27 @@
                 maintainAspectRatio:false,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        max: 100,
+                        border: {
+                            color: '#dddddd',
+                        }
+                    },
+                    x: {
+                        border: {
+                            color: '#dddddd',
+                        }
                     }
                 },
-                
                 plugins: {
                     legend : {
-                        align : 'end',
-                        labels : {
-                            boxWidth : 8,
-                            boxHeight : 8,
-                        }
+                        display: false,
+                        // align : 'end',
+                        // labels : {
+                        //     boxWidth : 8,
+                        //     boxHeight : 8,
+                        //     useBorderRadius	:true,
+                        //     borderRadius: 4,
+                        // }
                     },
                     tooltip : {
                         enabled: false,
@@ -545,13 +571,11 @@
             type: 'bar',
             data: {
                 datasets: [{
-                    label: '여유',
                     data: [10, 20, 30, 40],
                     order: 2,
                     backgroundColor: '#004CA0',
                     barThickness: 28,
                 }, {
-                    label: '사용',
                     data: [10, 20, 30, 40],
                     type: 'line',
                     order: 1,
@@ -567,17 +591,20 @@
                 maintainAspectRatio:false,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        max: 100,
+                        border: {
+                            color: '#dddddd',
+                        }
+                    },
+                    x: {
+                        border: {
+                            color: '#dddddd',
+                        }
                     }
                 },
-                
                 plugins: {
                     legend : {
-                        align : 'end',
-                        labels : {
-                            boxWidth : 8,
-                            boxHeight : 8,
-                        }
+                        display: false,
                     },
                     tooltip : {
                         enabled: false,
