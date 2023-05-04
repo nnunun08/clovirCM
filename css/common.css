@@ -912,20 +912,24 @@ a:hover {
   padding-left: 28px;
 }
 .treeView .group.open > .groupTit {
-  background: url(../img/ic_24_lowlink.svg) left center no-repeat;
+  background: url(../img/ic_24_lowlink.svg) left 5px center no-repeat;
 }
 .treeView .groupTit {
   display: block;
+  width: 100%;
   border: 0;
   text-align: left;
   padding: 10px 0;
   font-size: 16px;
-  padding-left: 32px;
-  background: url(../img/ic_24_highlink.svg) left center no-repeat;
+  padding-left: 37px;
+  background: url(../img/ic_24_highlink.svg) left 5px center no-repeat;
+  border-radius: 6px;
+  margin-left: -5px;
   cursor: pointer;
 }
-.treeView .groupTit:has(+ ul > .selected) {
+.treeView .groupTit.selected, .treeView .groupTit:hover {
   color: #0064C0;
+  background-color: #EFF9FF !important;
 }
 .treeView ul:has(.item) {
   display: none;
@@ -964,20 +968,24 @@ a:hover {
   padding-left: 28px;
 }
 .grid .group.open > .groupTit {
-  background: url(../img/ic_24_lowlink.svg) left center no-repeat;
+  background: url(../img/ic_24_lowlink.svg) left 5px center no-repeat;
 }
 .grid .groupTit {
   display: block;
+  width: 100%;
   border: 0;
   text-align: left;
   padding: 10px 0;
   font-size: 16px;
-  padding-left: 32px;
-  background: url(../img/ic_24_highlink.svg) left center no-repeat;
+  padding-left: 37px;
+  background: url(../img/ic_24_highlink.svg) left 5px center no-repeat;
+  border-radius: 6px;
+  margin-left: -5px;
   cursor: pointer;
 }
-.grid .groupTit:has(+ ul > .selected) {
+.grid .groupTit.selected, .grid .groupTit:hover {
   color: #0064C0;
+  background-color: #EFF9FF !important;
 }
 .grid ul:has(.item) {
   display: none;

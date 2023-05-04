@@ -869,21 +869,29 @@ $lnbWidth : 286px;
                 padding-left: 28px;
             }
             > .groupTit {
-                background: url(../img/ic_24_lowlink.svg) left center no-repeat;
+                background: url(../img/ic_24_lowlink.svg) left 5px center no-repeat;
             }
         }
     }
     .groupTit {
         display: block;
+        width: 100%;
         border: 0;
         text-align: left;
         padding: 10px 0;
         font-size: 16px;
-        padding-left: 32px;
-        background: url(../img/ic_24_highlink.svg) left center no-repeat;
+        padding-left: 37px;
+        background: url(../img/ic_24_highlink.svg) left 5px center no-repeat;
+        border-radius: 6px;
+        margin-left: -5px;
         cursor: pointer;
-        &:has(+ul>.selected) {
+        // &:has(+ul>.selected) {
+        //     color: #0064C0;
+        // }
+        &.selected,
+        &:hover {
             color: #0064C0;
+            background-color: #EFF9FF !important;
         }
     }
     ul:has(.item) {
